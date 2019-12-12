@@ -1,0 +1,32 @@
+{
+  "name": "marlenebowles.io",
+  "version": "1.0.0",
+  "description": "A portoflio site built with React, Next.Js, Typescript and Grommet.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marlenebowles/marlenebowles.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marlenebowles/marlenebowles.io/issues"
+  },
+  "homepage": "https://github.com/marlenebowles/marlenebowles.io#readme",
+  "dependencies": {
+    "grommet": "^2.8.1",
+    "next": "^9.1.5",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-components": "^4.4.1"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.6"
+  }
+}
