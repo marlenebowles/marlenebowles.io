@@ -1,6 +1,3 @@
-// font-family: 'Oswald', sans-serif;
-// font-family: 'Lato', sans-serif;
-
 export const theme = {
 	global: {
 		font: {
