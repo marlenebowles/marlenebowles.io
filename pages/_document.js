@@ -1,5 +1,6 @@
 import Document from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import styledNormalize from 'styled-normalize';
 
 export default class MyDocument extends Document {
 	static async getInitialProps(ctx) {
@@ -18,9 +19,21 @@ export default class MyDocument extends Document {
 				...initialProps,
 				styles: (
 					<>
+						<style
+							dangerouslySetInnerHTML={{
+								__html: `
+                                #__next { height: 100vh; }
+                                `,
+							}}
+						/>
 						<link
 							href="https://fonts.googleapis.com/css?family=Oswald|Roboto:400,700&display=swap"
 							rel="stylesheet"
+						/>
+						<style
+							dangerouslySetInnerHTML={{
+								__html: styledNormalize,
+							}}
 						/>
 						{initialProps.styles}
 						{sheet.getStyleElement()}
