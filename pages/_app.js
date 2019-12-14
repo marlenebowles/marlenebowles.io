@@ -1,24 +1,20 @@
-import App from 'next/app'
-import React from 'react'
+import App from 'next/app';
+import React from 'react';
 import { Grommet } from 'grommet';
-
-const theme = {
-    global: {
-      font: {
-        family: 'Roboto',
-        size: '18px',
-        height: '20px',
-      },
-    },
-  };
+import { theme } from './_theme';
 
 export default class MyApp extends App {
-  render() {
-    const { Component, pageProps } = this.props
-    return (
-      <Grommet theme={theme}>
-        <Component {...pageProps} />
-      </Grommet>
-    )
-  }
+	render() {
+		const { Component, pageProps } = this.props;
+		return (
+			<Grommet
+				style={{
+					height: '100vh',
+				}}
+				theme={theme}
+			>
+				<Component {...pageProps} />
+			</Grommet>
+		);
+	}
 }
