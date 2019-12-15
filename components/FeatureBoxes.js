@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import styled, { css } from 'styled-components';
 import { Box, Grid } from 'grommet';
+import FeatureBoxItem from './FeatureBoxItem';
 const gridRowValues = '500px 400px 350px';
 
 const wrapInRepeat = (repeat, values) =>
@@ -10,21 +11,30 @@ const wrapInRepeat = (repeat, values) =>
 
 const FeatureBoxLayout = styled.div`
 	display: grid;
-	grid-template-rows: ${props =>
-		props.length && props.length % 4 > 0
-			? wrapInRepeat(props.length % 4, gridRowValues)
-			: gridRowValues};
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 500px 400px 350px;
+  	grid-auto-flow: row;
+`;
+
+const FeatureBoxGrid = styled.div`
+	${props => (props && props.wholeLine) && css`
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+	`}
+	
 `;
 
 const FeatureBoxes = ({ ...props }) => {
 	return (
-		<FeatureBoxLayout length={props.content && props.content.length}>
-			<Box background="#ff7800">cats</Box>
-			<Box background="light-5">dogs</Box>
-			<Box background="light-2">moose</Box>
-			<Box background="light-2">moose</Box>
-			<Box background="light-2">moose</Box>
-			<Box background="light-2">moose</Box>
+		<FeatureBoxLayout>
+			{props.content.map((item, i) => {
+				return (
+					<FeatureBoxGrid key={i} wholeLine={i == 0}>
+						<FeatureBoxItem key={i} {...item} />
+					</FeatureBoxGrid>
+					)
+				;
+			})}
 		</FeatureBoxLayout>
 	);
 };

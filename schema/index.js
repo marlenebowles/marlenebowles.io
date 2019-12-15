@@ -1,6 +1,6 @@
 export const projects = [
 	{
-		header: 'foo',
+		header: '1',
 		text: `Nobody likes to wait… but you can make it less of a pain. I've created.`,
 		href: 'foo-bar',
 		hoverTag: 'View Project',
@@ -8,7 +8,7 @@ export const projects = [
 		bgColor: 'pink',
 	},
 	{
-		header: 'bar',
+		header: '2',
 		text: `Nobody likes to wait… but you can make it less of a pain. I've created.`,
 		href: 'foo-bar',
 		hoverTag: 'View Project',
@@ -16,7 +16,7 @@ export const projects = [
 		bgColor: 'blue',
 	},
 	{
-		header: 'baz',
+		header: '3',
 		text: `Nobody likes to wait… but you can make it less of a pain. I've created.`,
 		href: 'foo-bar',
 		hoverTag: 'View Project',
@@ -24,7 +24,7 @@ export const projects = [
 		bgColor: 'white',
 	},
 	{
-		header: 'fi',
+		header: '4',
 		text: `Nobody likes to wait… but you can make it less of a pain. I've created.`,
 		href: 'foo-bar',
 		hoverTag: 'View Project',
@@ -32,7 +32,7 @@ export const projects = [
 		bgColor: 'yellow',
 	},
 	{
-		header: 'fum',
+		header: '5',
 		text: `Nobody likes to wait… but you can make it less of a pain. I've created.`,
 		href: 'foo-bar',
 		hoverTag: 'View Project',
@@ -40,7 +40,7 @@ export const projects = [
 		bgColor: 'yellow',
 	},
 	{
-		header: 'foo',
+		header: '6',
 		text: `Nobody likes to wait… but you can make it less of a pain. I've created.`,
 		href: 'foo-bar',
 		hoverTag: 'View Project',
@@ -48,7 +48,7 @@ export const projects = [
 		bgColor: 'pink',
 	},
 	{
-		header: 'bar',
+		header: '7',
 		text: `Nobody likes to wait… but you can make it less of a pain. I've created.`,
 		href: 'foo-bar',
 		hoverTag: 'View Project',
@@ -56,7 +56,7 @@ export const projects = [
 		bgColor: 'blue',
 	},
 	{
-		header: 'baz',
+		header: '8',
 		text: `Nobody likes to wait… but you can make it less of a pain. I've created.`,
 		href: 'foo-bar',
 		hoverTag: 'View Project',
@@ -64,7 +64,7 @@ export const projects = [
 		bgColor: 'white',
 	},
 	{
-		header: 'fi',
+		header: '9',
 		text: `Nobody likes to wait… but you can make it less of a pain. I've created.`,
 		href: 'foo-bar',
 		hoverTag: 'View Project',
@@ -72,7 +72,7 @@ export const projects = [
 		bgColor: 'yellow',
 	},
 	{
-		header: 'fum',
+		header: '10',
 		text: `Nobody likes to wait… but you can make it less of a pain. I've created.`,
 		href: 'foo-bar',
 		hoverTag: 'View Project',
