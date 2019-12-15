@@ -1,19 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Box, Grid } from 'grommet';
+import FeatureBoxItem from './FeatureBoxItem';
 
-// in an array of content
-// a feature 
-export default () => (
-    <div>
-        header    
-    </div>
-    <div>
-    item 1
-    </div>
-    <div>
-    item 2
-    </div>
-    <div>
-    item 3
-</div>
+const FeatureBoxes = ({ content }) => (
+	<Fragment>
+		{content.map((item, i) => (
+			<FeatureBoxItem key={i} {...item}></FeatureBoxItem>
+		))}
+	</Fragment>
 );
+
+export default FeatureBoxes;
