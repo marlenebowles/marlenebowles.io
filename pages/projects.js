@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import { Button, Heading, Box } from 'grommet';
+import Link from 'next/link';
+import Nav from '../components/Nav';
 
 const FeatureBox = styled(Box)`
 	background-image: url('/carol-e1449867374669.jpg');
@@ -8,6 +10,7 @@ const FeatureBox = styled(Box)`
 `;
 export default () => (
 	<Fragment>
+		<Nav />
 		<Heading level={1} margin="none">
 			Marlene Bowles
 		</Heading>

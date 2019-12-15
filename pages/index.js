@@ -1,12 +1,9 @@
 import React, { Fragment } from 'react';
-import { Text, Heading, Box, Grid } from 'grommet';
-import Link from 'next/link';
-import Nav from '../components/Nav';
+import { Heading, Box, Grid } from 'grommet';
 
 export default () => (
 	<Fragment>
 		<Grid fill={true}>
-			<Nav />
 			<Box
 				direction="column"
 				justify="center"
