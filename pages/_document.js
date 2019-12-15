@@ -27,9 +27,15 @@ export default class MyDocument extends Document {
 							}}
 						/>
 						<link
-							href="https://fonts.googleapis.com/css?family=Oswald|Roboto:400,700&display=swap"
+							href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700&display=swap"
 							rel="stylesheet"
 						/>
+
+						<link
+							href="https://rsms.me/inter/inter.css"
+							rel="stylesheet"
+						/>
+
 						<style
 							dangerouslySetInnerHTML={{
 								__html: styledNormalize,

@@ -1,46 +1,52 @@
 export const theme = {
 	global: {
 		font: {
-			family: 'Roboto',
+			family: 'Inter',
 			size: '16px',
 			height: '20px',
 		},
 	},
 	heading: {
-		extend: 'text-transform: uppercase',
 		level: {
 			1: {
 				font: {
-					family: 'Oswald',
+					family: 'Inter',
+					weight: 900,
 				},
 			},
 			2: {
 				font: {
-					family: 'Oswald',
+					family: 'Inter',
+					weight: 900,
 				},
 			},
 			3: {
 				font: {
-					family: 'Oswald',
+					family: 'Source Serif Pro',
+					weight: 700,
 				},
+				xlarge: { size: '40px' },
 			},
 			4: {
 				font: {
-					family: 'Oswald',
+					family: 'Source Serif Pro',
+					weight: 700,
 				},
+				xlarge: { size: '40px' },
 			},
 			5: {
 				font: {
-					family: 'Oswald',
+					family: 'Source Serif Pro',
+					weight: 700,
 				},
 			},
 			6: {
 				font: {
-					family: 'Oswald',
+					family: 'Source Serif Pro',
 				},
 			},
 		},
-		weight: 700,
+		weight: 900,
 	},
 };
 
