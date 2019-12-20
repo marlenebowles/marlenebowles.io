@@ -1,14 +1,27 @@
-import React, { Fragment } from 'react';
-import { Box, Grid } from 'grommet';
+import React from 'react';
+import styled, { css } from 'styled-components';
+import Link from 'next/link';
 
-// props to support
-// larger feature
-const FeatureBoxContent = ({ header, text, href, hoverTag, bgImage, bgColor }) => {
+const FeaturedBoxContentStyle = styled.div`
+	${props => props && props.bgImage ? css`
+		background: url(${props.bgImage});
+		background-position: 75% 50%;
+		background-size: cover;
+	` : css`
+		background-color: ${props.bgColor}
+	`
+	}
+`
+
+const FeatureBoxContent = (props) => {
 	return (
-		<Fragment>
-			<div>{header}</div>
-			<div>{text}</div>
-		</Fragment>
+		<Link href={props.href}>
+			<FeaturedBoxContentStyle {...props}>
+				<div>{props.hoverTag}</div>
+				<div>{props.header}</div>
+				<div>{props.text}</div>
+			</FeaturedBoxContentStyle>
+		</Link>
 	);
 };
 export default FeatureBoxContent;

@@ -14,8 +14,12 @@ const FeatureBoxGrid = styled.div`
 	`}
 `;
 
-const FeatureBoxItem = styled.div`
+const FeatureBoxGridItem = styled.div`
 	display: grid;
+	min-height: 500px;
+    box-sizing: border-box;
+    position: relative;
+	overflow: hidden;
 	${props => (props.fullCol && props.size == 'medium' || 
 		props.fullCol && props.size == 'large') && css`
 			grid-column-start: 1;
@@ -30,9 +34,9 @@ const FeatureBoxes = ({ ...props }) => {
 			{size => (
 			<FeatureBoxGrid repeatRow={Math.floor(props.content.length / 3)} size={size}>
 				{props.content.map((item, i) => (
-					<FeatureBoxItem key={i} fullCol={i % 3 == 0} size={size}>
+					<FeatureBoxGridItem key={i} fullCol={i % 3 == 0} size={size}>
 						<FeatureBoxContent key={i} {...item}></FeatureBoxContent>
-					</FeatureBoxItem>
+					</FeatureBoxGridItem>
 					)
 				)}
 				</FeatureBoxGrid>
