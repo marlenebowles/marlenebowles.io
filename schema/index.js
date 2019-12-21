@@ -21,7 +21,7 @@ export const projects = [
 		text: `Task sharing makes my home run efficiently.`,
 		href: 'yourturn-dev',
 		hoverTag: 'View Project',
-		bgImage: false,
+		bgImage: 'carol-e1449867374669.jpg',
 		bgColor: '#29335c',
 	},
 	// {
