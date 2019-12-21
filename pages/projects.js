@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Heading, Box } from 'grommet';
 import Nav from '../components/Nav';
 import { projects } from '../schema/';
-import FeatureBoxSection from '../components/FeatureBoxSection';
+import FeatureSection from '../components/FeatureSection';
 
 // Nav
 // Main
@@ -23,6 +23,6 @@ export default () => (
 		<Heading level={1} margin="none">
 			Projects
 		</Heading>
-		<FeatureBoxSection content={projects}></FeatureBoxSection>
+		<FeatureSection content={projects}></FeatureSection>
 	</Fragment>
 );

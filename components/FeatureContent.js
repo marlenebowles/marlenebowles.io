@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import Link from 'next/link';
 import { Heading, Text } from 'grommet';
 
-const FeatureBoxButton = styled.div`
+const FeatureButton = styled.div`
 	position: absolute;
 	top: 0;
 	right: 20px;
@@ -18,19 +18,20 @@ const FeatureBoxButton = styled.div`
 	font-family: Inter, Source Sans Pro, Helvetica Neue, Arial, sans-serif;
 `;
 
-const FeatureBoxHeader = styled(Heading)`
+const FeatureHeader = styled(Heading)`
 	transform: translate3D(0, 0, 0);
 	transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	margin: 0 auto 60px;
 `;
-const FeatureBoxText = styled(Text)`
+const FeatureText = styled(Text)`
 	transform: translate3D(0, 0, 0);
 	transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	max-width: 500px;
 	width: 80%;
 	margin: 0 auto 60px;
 `;
-const FeatureBoxButtonLabel = styled.span`
+
+const FeatureButtonLabel = styled.span`
 	transform: translateY(-15px);
 	transition: transform 0.35s cubic-bezier(0.19, 1, 0.22, 1) 0.1s,
 		opacity 0.35s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
@@ -38,7 +39,7 @@ const FeatureBoxButtonLabel = styled.span`
 	opacity: 0;
 `;
 
-const FeatureBoxBackground = styled.div`
+const FeatureBackground = styled.div`
 	background: url(${props => props.bgImage});
 	background-position: 75% 50%;
 	background-size: cover;
@@ -51,7 +52,7 @@ const FeatureBoxBackground = styled.div`
 	transform: scale3D(1);
 	transition: transform 0.35s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
 `;
-const FeatureBoxDivider = styled.div`
+const FeatureDivider = styled.div`
 	display: block;
 	position: relative;
 	bottom: 0;
@@ -65,7 +66,7 @@ const FeatureBoxDivider = styled.div`
 	transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 `;
 
-const FeaturedBoxContentStyle = styled.div`
+const FeatureContentStyle = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -78,43 +79,43 @@ const FeaturedBoxContentStyle = styled.div`
 		`}
 
 	&:hover {
-		${FeatureBoxButton} {
+		${FeatureButton} {
 			transform: scaleY(1) translateZ(0);
 		}
-		${FeatureBoxButtonLabel} {
+		${FeatureButtonLabel} {
 			transform: scaleY(1.9) translateY(0);
 			opacity: 1;
 		}
-		${FeatureBoxBackground} {
+		${FeatureBackground} {
 			transform: scale3D(1.04, 1.04, 1);
 		}
-		${FeatureBoxHeader} {
+		${FeatureHeader} {
 			transform: translate3D(0, -6px, 0);
 		}
-		${FeatureBoxText} {
+		${FeatureText} {
 			transform: translate3D(0, 6px, 0);
 		}
-		${FeatureBoxDivider} {
+		${FeatureDivider} {
 			transform: scale3D(1.5, 1.5, 1);
 		}
 	}
 `;
 
-const FeatureBoxContent = props => {
+const FeatureContent = props => {
 	return (
 		<Link href={props.href}>
-			<FeaturedBoxContentStyle as="a" {...props}>
-				{props.bgImage && <FeatureBoxBackground {...props} />}
-				<FeatureBoxButton>{props.hoverTag}</FeatureBoxButton>
-				<FeatureBoxHeader color="white" level={2}>
+			<FeatureContentStyle as="a" {...props}>
+				{props.bgImage && <FeatureBackground {...props} />}
+				<FeatureButton>{props.hoverTag}</FeatureButton>
+				<FeatureHeader color="white" level={2}>
 					{props.header}
-				</FeatureBoxHeader>
-				{props.useDivider && <FeatureBoxDivider />}
-				<FeatureBoxText color="white" size="medium">
+				</FeatureHeader>
+				{props.useDivider && <FeatureDivider />}
+				<FeatureText color="white" size="medium">
 					{props.text}
-				</FeatureBoxText>
-			</FeaturedBoxContentStyle>
+				</FeatureText>
+			</FeatureContentStyle>
 		</Link>
 	);
 };
-export default FeatureBoxContent;
+export default FeatureContent;

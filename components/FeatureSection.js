@@ -1,9 +1,9 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { ResponsiveContext } from 'grommet';
-import FeatureBoxContent from './FeatureBoxContent';
+import FeatureContent from './FeatureContent';
 
-const FeatureBoxGrid = styled.div`
+const FeatureGrid = styled.div`
 	display: grid;
 	justify-items: center;
 	grid-template-columns: 1fr;
@@ -16,7 +16,7 @@ const FeatureBoxGrid = styled.div`
 		`}
 `;
 
-const FeatureBoxGridItem = styled.div`
+const FeatureGridItem = styled.div`
 	display: grid;
 	min-height: 500px;
 	position: relative;
@@ -31,30 +31,27 @@ const FeatureBoxGridItem = styled.div`
 		`}
 `;
 
-const FeatureBoxes = ({ ...props }) => {
+const FeatureSection = ({ ...props }) => {
 	return (
 		<ResponsiveContext.Consumer>
 			{size => (
-				<FeatureBoxGrid
+				<FeatureGrid
 					repeatRow={Math.floor(props.content.length / 3)}
 					size={size}
 				>
 					{props.content.map((item, i) => (
-						<FeatureBoxGridItem
+						<FeatureGridItem
 							key={i}
 							fullCol={i % 3 == 0}
 							size={size}
 						>
-							<FeatureBoxContent
-								key={i}
-								{...item}
-							></FeatureBoxContent>
-						</FeatureBoxGridItem>
+							<FeatureContent key={i} {...item}></FeatureContent>
+						</FeatureGridItem>
 					))}
-				</FeatureBoxGrid>
+				</FeatureGrid>
 			)}
 		</ResponsiveContext.Consumer>
 	);
 };
 
-export default FeatureBoxes;
+export default FeatureSection;
