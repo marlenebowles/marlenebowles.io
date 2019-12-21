@@ -6,7 +6,7 @@ export const projects = [
 		href: 'computpars',
 		hoverTag: 'View Project',
 		bgImage: false,
-		bgColor: 'accent-2',
+		bgColor: '#ff5454',
 	},
 	{
 		header: 'Sound Reverie',
@@ -14,7 +14,7 @@ export const projects = [
 		href: 'sound-reverie',
 		hoverTag: 'View Project',
 		bgImage: false,
-		bgColor: 'accent-1',
+		bgColor: '#007503',
 	},
 	{
 		header: 'Yourturn.dev',
@@ -22,7 +22,7 @@ export const projects = [
 		href: 'yourturn-dev',
 		hoverTag: 'View Project',
 		bgImage: false,
-		bgColor: 'brand',
+		bgColor: '#29335c',
 	},
 	// {
 	// 	header: '4',
