@@ -7,6 +7,7 @@ export const projects = [
 		hoverTag: 'View Project',
 		bgImage: false,
 		bgColor: '#ff5454',
+		useDivider: true,
 	},
 	{
 		header: 'Sound Reverie',
@@ -15,6 +16,7 @@ export const projects = [
 		hoverTag: 'View Project',
 		bgImage: false,
 		bgColor: '#007503',
+		useDivider: true,
 	},
 	{
 		header: 'Yourturn.dev',
@@ -22,7 +24,8 @@ export const projects = [
 		href: 'yourturn-dev',
 		hoverTag: 'View Project',
 		bgImage: 'carol-e1449867374669.jpg',
-		bgColor: '#29335c',
+		bgColor: false,
+		useDivider: false,
 	},
 	// {
 	// 	header: '4',
