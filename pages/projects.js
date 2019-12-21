@@ -1,16 +1,28 @@
 import React, { Fragment } from 'react';
-import styled from 'styled-components';
-import { Button, Heading, Box } from 'grommet';
+import { Heading, Box } from 'grommet';
+import Nav from '../components/Nav';
+import { projects } from '../schema/';
+import FeatureSection from '../components/FeatureSection';
 
-const FeatureBox = styled(Box)`
-	background-image: url('/carol-e1449867374669.jpg');
-	height: 70px;
-`;
+// Nav
+// Main
+// Footer
+
+/**
+ * Main
+ *
+ * Featured
+ * Side | Side
+ * Third
+ * Side | Side
+ */
+
 export default () => (
 	<Fragment>
+		<Nav />
 		<Heading level={1} margin="none">
-			Marlene Bowles
+			Projects
 		</Heading>
-		<FeatureBox></FeatureBox>
+		<FeatureSection content={projects}></FeatureSection>
 	</Fragment>
 );

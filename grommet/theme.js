@@ -47,7 +47,13 @@ export const theme = {
 			},
 		},
 		weight: 900,
-	},
+  },
+  colors: {
+    brand: '#29335c',
+    white: '#FFFFFF',
+    neutral: ['#f3e8ee',  '#3D138D', '#00739D', '#A2423D'],
+    accent: ['#ff5454', '#007503', '#29335c', '#f3a712']
+  }
 };
 
 /*
