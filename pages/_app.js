@@ -1,20 +1,20 @@
 import App from 'next/app';
 import React from 'react';
-import { Grommet } from 'grommet';
-import { theme } from '../grommet/theme';
+import { ThemeProvider } from 'styled-components';
+import { themes } from '@computapars/core';
 
 export default class MyApp extends App {
 	render() {
 		const { Component, pageProps } = this.props;
 		return (
-			<Grommet
+			<ThemeProvider
 				style={{
 					height: '100vh',
 				}}
-				theme={theme}
+				theme={themes.gallery}
 			>
 				<Component {...pageProps} />
-			</Grommet>
+			</ThemeProvider>
 		);
 	}
 }
