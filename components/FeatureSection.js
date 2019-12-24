@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { ResponsiveContext } from 'grommet';
 import FeatureContent from './FeatureContent';
 
 const FeatureGrid = styled.div`
@@ -33,24 +32,16 @@ const FeatureGridItem = styled.div`
 
 const FeatureSection = ({ ...props }) => {
 	return (
-		<ResponsiveContext.Consumer>
-			{size => (
-				<FeatureGrid
-					repeatRow={Math.floor(props.content.length / 3)}
-					size={size}
-				>
-					{props.content.map((item, i) => (
-						<FeatureGridItem
-							key={i}
-							fullCol={i % 3 == 0}
-							size={size}
-						>
-							<FeatureContent key={i} {...item}></FeatureContent>
-						</FeatureGridItem>
-					))}
-				</FeatureGrid>
-			)}
-		</ResponsiveContext.Consumer>
+		<FeatureGrid
+			repeatRow={Math.floor(props.content.length / 3)}
+			size={'sm'}
+		>
+			{props.content.map((item, i) => (
+				<FeatureGridItem key={i} fullCol={i % 3 == 0} size={'sm'}>
+					<FeatureContent key={i} {...item}></FeatureContent>
+				</FeatureGridItem>
+			))}
+		</FeatureGrid>
 	);
 };
 

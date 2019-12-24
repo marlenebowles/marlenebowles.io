@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import Link from 'next/link';
-import { Heading, Text } from 'grommet';
 
 const FeatureButton = styled.div`
 	position: absolute;
@@ -18,12 +17,12 @@ const FeatureButton = styled.div`
 	font-family: Inter, Source Sans Pro, Helvetica Neue, Arial, sans-serif;
 `;
 
-const FeatureHeader = styled(Heading)`
+const FeatureHeader = styled.h1`
 	transform: translate3D(0, 0, 0);
 	transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	margin: 0 auto 60px;
 `;
-const FeatureText = styled(Text)`
+const FeatureText = styled.p`
 	transform: translate3D(0, 0, 0);
 	transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	max-width: 500px;

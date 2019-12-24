@@ -2,7 +2,7 @@ export const projects = [
 	{
 		header: 'Computapars',
 		text: `A personal design system monorepo. Created with Storybook, 
-		Styled Components and Grommet, Computapars makes it easy to scale out my personal projects.`,
+		Styled Components and styled-system, Computapars makes it easy to scale out my personal projects.`,
 		href: 'computpars',
 		hoverTag: 'View Project',
 		bgImage: false,

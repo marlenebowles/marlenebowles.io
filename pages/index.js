@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-// import { Heading, Box, Grid } from 'grommet';
 
 export default () => (
 	<Fragment>
