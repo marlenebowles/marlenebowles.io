@@ -1,6 +1,6 @@
 ## MarleneBowles.io
 
-A portoflio site built with React, Next.Js and Grommet.
+A portoflio site built with React, Next.Js and Computapars design system.
 
 ## Inspiration
 

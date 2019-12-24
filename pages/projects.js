@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import { Heading, Box } from 'grommet';
 import Nav from '../components/Nav';
 import { projects } from '../schema/';
 import FeatureSection from '../components/FeatureSection';
@@ -20,9 +19,9 @@ import FeatureSection from '../components/FeatureSection';
 export default () => (
 	<Fragment>
 		<Nav />
-		<Heading level={1} margin="none">
+		<div level={1} margin="none">
 			Projects
-		</Heading>
+		</div>
 		<FeatureSection content={projects}></FeatureSection>
 	</Fragment>
 );
