@@ -3,19 +3,6 @@ import Nav from '../components/Nav';
 import { projects } from '../schema/';
 import FeatureSection from '../components/FeatureSection';
 
-// Nav
-// Main
-// Footer
-
-/**
- * Main
- *
- * Featured
- * Side | Side
- * Third
- * Side | Side
- */
-
 export default () => (
 	<Fragment>
 		<Nav />

@@ -1,5 +1,6 @@
-const config = {
-  target: "serverless",
-};
+const withTM = require('next-transpile-modules');
 
-module.exports = config;
+module.exports = withTM({
+	transpileModules: ['@computapars/*'],
+	target: 'serverless',
+});
