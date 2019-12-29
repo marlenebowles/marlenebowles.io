@@ -1,7 +1,7 @@
 import App from 'next/app';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { themes } from '@computapars/core/dist';
+import { themes } from '@computapars/core';
 
 export default class MyApp extends App {
 	render() {

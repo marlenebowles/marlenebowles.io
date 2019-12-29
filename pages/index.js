@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { FlexBox } from '@computapars/flex';
+import Button from '@computapars/button';
 import {
 	Text,
 	IntroText,
@@ -14,6 +15,7 @@ import {
 export default () => (
 	<Fragment>
 		<div>
+			<Button variant="secondary">Bullshit</Button>
 			<IntroText>
 				Quasar Euclid dispassionate extraterrestrial observer from which
 				we spring rich in heavy atoms worldlets. A mote of dust
@@ -69,6 +71,12 @@ export default () => (
 					</FlexBox>
 				</div>
 			</div>
+			<H1>We are the legacy of 15 billion years of cosmic evolution.</H1>
+			<H2>We are the legacy of 15 billion years of cosmic evolution.</H2>
+			<H3>We are the legacy of 15 billion years of cosmic evolution.</H3>
+			<H4>We are the legacy of 15 billion years of cosmic evolution.</H4>
+			<H5>We are the legacy of 15 billion years of cosmic evolution.</H5>
+			<H6>We are the legacy of 15 billion years of cosmic evolution.</H6>
 		</div>
 	</Fragment>
 );
