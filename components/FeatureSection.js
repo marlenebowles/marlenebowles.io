@@ -17,7 +17,7 @@ const FeatureGrid = styled.div`
 
 const FeatureGridItem = styled.div`
 	display: grid;
-	min-height: 500px;
+	min-height: ${props => props.theme.sizes.minHeight[5]}px;
 	position: relative;
 	overflow: hidden;
 	justify-self: stretch;

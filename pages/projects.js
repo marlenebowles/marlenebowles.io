@@ -6,8 +6,16 @@ import FeatureSection from '../components/FeatureSection';
 
 export default () => (
 	<Container>
-		<H1 level={1} margin="none">
-			Projects
+		<H1
+			letterSpacing="xs"
+			style={{
+				fontSize: '140px',
+				zIndex: 1,
+				position: 'relative',
+			}}
+			marginBottom={-26}
+		>
+			Projects.
 		</H1>
 		<FeatureSection content={featuredProjects} />
 	</Container>
