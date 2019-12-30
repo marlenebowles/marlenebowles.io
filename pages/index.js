@@ -1,25 +1,27 @@
-import React, { Fragment } from 'react';
-
+import React from 'react';
+import { FlexBox } from '@computapars/flex';
+import { H1, H2 } from '@computapars/typography';
 export default () => (
-	<Fragment>
+	<FlexBox
+		flexDirection="column"
+		height="100vh"
+		style={{
+			background:
+				'linear-gradient(102.77deg, #865ED6 -9.18%, #18BAB9 209.09%)',
+		}}
+		justifyContent="center"
+		alignContent="center"
+		alignItems="center"
+	>
 		<div>
-			<div
-				direction="column"
-				justify="center"
-				align="center"
-				background="linear-gradient(102.77deg, #865ED6 -9.18%, #18BAB9 209.09%)"
-			>
-				<div>
-					<div color="white" level={1} margin="none">
-						Marlene Bowles
-					</div>
-				</div>
-				<div>
-					<div level={4} color="white" size="xlarge">
-						Coming Soon...
-					</div>
-				</div>
-			</div>
+			<H1 color="white" as="h1">
+				Marlene Bowles
+			</H1>
 		</div>
-	</Fragment>
+		<div>
+			<H2 color="white" mt={0} fontFamily="secondary">
+				Coming Soon...
+			</H2>
+		</div>
+	</FlexBox>
 );

@@ -1,4 +1,4 @@
-export const projects = [
+export const featuredProjects = [
 	{
 		header: 'Computapars',
 		text: `A personal design system monorepo. Created with Storybook, 
@@ -27,60 +27,4 @@ export const projects = [
 		bgColor: false,
 		useDivider: false,
 	},
-	// {
-	// 	header: '4',
-	// 	text: `Nobody likes to wait… but you can make it less of a pain. I've created.`,
-	// 	href: 'foo-bar',
-	// 	hoverTag: 'View Project',
-	// 	bgImage: 'carol-e1449867374669.jpg',
-	// 	bgColor: 'yellow',
-	// },
-	// {
-	// 	header: '5',
-	// 	text: `Nobody likes to wait… but you can make it less of a pain. I've created.`,
-	// 	href: 'foo-bar',
-	// 	hoverTag: 'View Project',
-	// 	bgImage: 'carol-e1449867374669.jpg',
-	// 	bgColor: 'yellow',
-	// },
-	// {
-	// 	header: '6',
-	// 	text: `Nobody likes to wait… but you can make it less of a pain. I've created.`,
-	// 	href: 'foo-bar',
-	// 	hoverTag: 'View Project',
-	// 	bgImage: false,
-	// 	bgColor: 'pink',
-	// },
-	// {
-	// 	header: '7',
-	// 	text: `Nobody likes to wait… but you can make it less of a pain. I've created.`,
-	// 	href: 'foo-bar',
-	// 	hoverTag: 'View Project',
-	// 	bgImage: false,
-	// 	bgColor: 'blue',
-	// },
-	// {
-	// 	header: '8',
-	// 	text: `Nobody likes to wait… but you can make it less of a pain. I've created.`,
-	// 	href: 'foo-bar',
-	// 	hoverTag: 'View Project',
-	// 	bgImage: false,
-	// 	bgColor: 'white',
-	// },
-	// {
-	// 	header: '9',
-	// 	text: `Nobody likes to wait… but you can make it less of a pain. I've created.`,
-	// 	href: 'foo-bar',
-	// 	hoverTag: 'View Project',
-	// 	bgImage: 'carol-e1449867374669.jpg',
-	// 	bgColor: 'yellow',
-	// },
-	// {
-	// 	header: '10',
-	// 	text: `Nobody likes to wait… but you can make it less of a pain. I've created.`,
-	// 	href: 'foo-bar',
-	// 	hoverTag: 'View Project',
-	// 	bgImage: 'carol-e1449867374669.jpg',
-	// 	bgColor: 'yellow',
-	// },
 ];

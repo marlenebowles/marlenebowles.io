@@ -7,12 +7,12 @@ const FeatureGrid = styled.div`
 	justify-items: center;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
-	${props =>
-		(props.size == 'medium' || props.size == 'large') &&
-		css`
+	${props => css`
+		${props.theme.mediaQueries.md} {
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: repeat(${props => props.repeatRow}, 1fr);
-		`}
+		}
+	`}
 `;
 
 const FeatureGridItem = styled.div`
@@ -22,22 +22,20 @@ const FeatureGridItem = styled.div`
 	overflow: hidden;
 	justify-self: stretch;
 	${props =>
-		((props.fullCol && props.size == 'medium') ||
-			(props.fullCol && props.size == 'large')) &&
+		props.fullCol &&
 		css`
-			grid-column-start: 1;
-			grid-column-end: 3;
+			${props.theme.mediaQueries.md} {
+				grid-column-start: 1;
+				grid-column-end: 3;
+			}
 		`}
 `;
 
 const FeatureSection = ({ ...props }) => {
 	return (
-		<FeatureGrid
-			repeatRow={Math.floor(props.content.length / 3)}
-			size={'sm'}
-		>
+		<FeatureGrid repeatRow={Math.floor(props.content.length / 3)}>
 			{props.content.map((item, i) => (
-				<FeatureGridItem key={i} fullCol={i % 3 == 0} size={'sm'}>
+				<FeatureGridItem key={i} fullCol={i % 3 == 0}>
 					<FeatureContent key={i} {...item}></FeatureContent>
 				</FeatureGridItem>
 			))}
