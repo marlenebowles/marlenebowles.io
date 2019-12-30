@@ -14,7 +14,7 @@ const FeatureButton = styled.div`
 	will-change: transform, opacity;
 	transform: scaleY(0) translateZ(0);
 	transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
-	font-family: Inter, Source Sans Pro, Helvetica Neue, Arial, sans-serif;
+	font-family: 'Inter', Source Sans Pro, Helvetica Neue, Arial, sans-serif;
 `;
 
 const FeatureHeader = styled.h1`
