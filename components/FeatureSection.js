@@ -35,7 +35,7 @@ const FeatureSection = ({ ...props }) => {
 	return (
 		<FeatureGrid repeatRow={Math.floor(props.content.length / 3)}>
 			{props.content.map((item, i) => (
-				<FeatureGridItem key={i} fullCol={i % 3 == 0}>
+				<FeatureGridItem key={i} fullCol={i % 3 == 0 || props.fullCol}>
 					<FeatureContent key={i} {...item}></FeatureContent>
 				</FeatureGridItem>
 			))}

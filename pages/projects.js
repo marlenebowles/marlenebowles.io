@@ -1,17 +1,26 @@
 import React from 'react';
+import useFilter from './../components/hooks/useFilter';
 import { Container } from '@computapars/layout';
-import { featuredProjects } from '../schema/';
+import { webProjects } from '../schema/';
 import FeatureSection from '../components/FeatureSection';
-import { FlexBox } from '@computapars/flex';
 
-export default () => (
-	<Container>
-		<FlexBox>
-			<div>All</div>
-			<div>React</div>
-			<div>MERN</div>
-			<div>Node</div>
-		</FlexBox>
-		<FeatureSection content={featuredProjects} />
-	</Container>
-);
+export default () => {
+	const [filter, setFilter, content] = useFilter(webProjects);
+	const choices = ['all', 'react', 'MERN', 'node'];
+	return (
+		<Container>
+			{choices.map(item => (
+				<button
+					key={item}
+					bg={item == filter ? 'black' : 'white'}
+					onClick={() => {
+						setFilter(item);
+					}}
+				>
+					{item}
+				</button>
+			))}
+			<FeatureSection fullCol={content.length < 3} content={content} />
+		</Container>
+	);
+};
