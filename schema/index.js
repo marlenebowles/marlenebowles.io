@@ -1,4 +1,4 @@
-export const featuredProjects = [
+export const webProjects = [
 	{
 		header: 'Computapars',
 		text: `A personal design system monorepo. Created with Storybook, 
@@ -8,6 +8,7 @@ export const featuredProjects = [
 		bgImage: false,
 		bgColor: '#ff5454',
 		useDivider: true,
+		categories: ['react'],
 	},
 	{
 		header: 'Sound Reverie',
@@ -17,6 +18,7 @@ export const featuredProjects = [
 		bgImage: false,
 		bgColor: '#007503',
 		useDivider: true,
+		categories: ['react', 'MERN', 'node'],
 	},
 	{
 		header: 'Yourturn.dev',
@@ -26,5 +28,49 @@ export const featuredProjects = [
 		bgImage: 'carol-e1449867374669.jpg',
 		bgColor: false,
 		useDivider: false,
+		categories: ['react', 'MERN', 'node'],
+	},
+];
+
+export const musicProjects = [
+	{
+		header: 'Winning Friends',
+		text: `Solo work`,
+		href: 'https://soundcloud.com/winningfriends',
+		hoverTag: 'View Project',
+		bgImage: false,
+		bgColor: '#ff5454',
+		useDivider: true,
+		categories: ['solo'],
+	},
+	{
+		header: 'Dead Painters',
+		text: `A blog exploring sound and inpsirations. `,
+		href: 'https://deadpainters.bandcamp.com/',
+		hoverTag: 'View Project',
+		bgImage: false,
+		bgColor: '#007503',
+		useDivider: true,
+		categories: ['bands'],
+	},
+	{
+		header: 'Fixtures',
+		text: `Task sharing makes my home run efficiently.`,
+		href: 'https://fixturesmusic.bandcamp.com/album/watch-your-head',
+		hoverTag: 'View Project',
+		bgImage: 'carol-e1449867374669.jpg',
+		bgColor: false,
+		useDivider: false,
+		categories: ['bands'],
+	},
+	{
+		header: 'Sunny Listen',
+		text: `Task sharing makes my home run efficiently.`,
+		href: '',
+		hoverTag: 'View Project',
+		bgImage: 'carol-e1449867374669.jpg',
+		bgColor: false,
+		useDivider: false,
+		categories: ['bands'],
 	},
 ];

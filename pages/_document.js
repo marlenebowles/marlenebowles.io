@@ -22,9 +22,7 @@ export default class MyDocument extends Document {
 					<>
 						<style
 							dangerouslySetInnerHTML={{
-								__html: `
-                                #__next { height: 100vh; }
-                                `,
+								__html: styledNormalize,
 							}}
 						/>
 						<link
@@ -39,7 +37,11 @@ export default class MyDocument extends Document {
 
 						<style
 							dangerouslySetInnerHTML={{
-								__html: styledNormalize,
+								__html: `
+                                a {
+                                    text-decoration: none;
+                                }
+                                `,
 							}}
 						/>
 						{initialProps.styles}

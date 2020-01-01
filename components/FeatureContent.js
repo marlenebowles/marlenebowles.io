@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import { typography, color } from 'styled-system';
 import Link from 'next/link';
 
 const FeatureButton = styled.div`
@@ -7,20 +8,20 @@ const FeatureButton = styled.div`
 	top: 0;
 	right: 20px;
 	padding: 17px 20px;
-	background-color: #000;
-	color: #fff;
-	font-size: 13px;
 	transform-origin: 0 0;
 	will-change: transform, opacity;
 	transform: scaleY(0) translateZ(0);
 	transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
-	font-family: 'Inter', Source Sans Pro, Helvetica Neue, Arial, sans-serif;
+	${typography}
+	${color}
 `;
 
-const FeatureHeader = styled.h1`
+const FeatureHeader = styled.h3`
 	transform: translate3D(0, 0, 0);
 	transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	margin: 0 auto 60px;
+	${typography}
+	${color}
 `;
 const FeatureText = styled.p`
 	transform: translate3D(0, 0, 0);
@@ -28,6 +29,8 @@ const FeatureText = styled.p`
 	max-width: 500px;
 	width: 80%;
 	margin: 0 auto 60px;
+	${typography}
+	${color}
 `;
 
 const FeatureButtonLabel = styled.span`
@@ -60,9 +63,10 @@ const FeatureDivider = styled.div`
 	height: 2px;
 	background-color: currentColor;
 	width: 60px;
-	margin: 60px auto 30px;
+	margin: 30px auto;
 	transform: scale3D(1);
 	transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	${color}
 `;
 
 const FeatureContentStyle = styled.div`
@@ -105,12 +109,25 @@ const FeatureContent = props => {
 		<Link href={props.href}>
 			<FeatureContentStyle as="a" {...props}>
 				{props.bgImage && <FeatureBackground {...props} />}
-				<FeatureButton>{props.hoverTag}</FeatureButton>
-				<FeatureHeader color="white" level={2}>
+				<FeatureButton
+					bg="black"
+					color="white"
+					fontFamily="primary"
+					fontSize={12}
+				>
+					{props.hoverTag}
+				</FeatureButton>
+				<FeatureHeader
+					color="white"
+					fontSize="xxxl"
+					fontWeight="regular"
+					fontFamily="secondary"
+					letterSpacing="sm"
+				>
 					{props.header}
 				</FeatureHeader>
-				{props.useDivider && <FeatureDivider />}
-				<FeatureText color="white" size="medium">
+				{props.useDivider && <FeatureDivider color="white" />}
+				<FeatureText color="white" fontFamily="primary">
 					{props.text}
 				</FeatureText>
 			</FeatureContentStyle>
