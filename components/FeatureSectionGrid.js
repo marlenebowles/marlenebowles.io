@@ -39,7 +39,7 @@ const FeatureSectionGrid = ({ ...props }) => {
 				<FeatureGridItem key={i} fullCol={i % 3 == 0 || props.fullCol}>
 					<FeatureContent
 						key={i}
-						bg={item.bgImage? '': COLOR_OPTIONS[i]}
+						bg={item.bgImage? '': COLOR_OPTIONS[Math.floor(Math.random() * COLOR_OPTIONS.length)]}
 						useExternal={props.useExternal}
 						{...item} />
 				</FeatureGridItem>
