@@ -2,7 +2,9 @@ import React from 'react';
 import useFilter from './../components/hooks/useFilter';
 import { Container } from '@computapars/layout';
 import { musicProjects } from '../schema/';
-import FeatureSection from '../components/FeatureSection';
+import FeatureSectionGrid from '../components/FeatureSectionGrid';
+import { LinkButton } from '@computapars/button';
+import { COLOR_OPTIONS } from './../utils/constants';
 
 export default () => {
 	const [filter, setFilter, content] = useFilter(musicProjects);
@@ -10,17 +12,22 @@ export default () => {
 	return (
 		<Container>
 			{choices.map(item => (
-				<button
+				<LinkButton
 					key={item}
-					bg={item == filter ? 'black' : 'white'}
+					color={filter == item ? 'white' : COLOR_OPTIONS[index]}
+					bg={filter == item ?  COLOR_OPTIONS[index]: 'white'}
 					onClick={() => {
 						setFilter(item);
 					}}
 				>
 					{item}
-				</button>
+				</LinkButton>
 			))}
-			<FeatureSection fullCol={content.length < 3} content={content} />
+			<FeatureSectionGrid 
+				fullCol={content.length < 3}
+				content={content}
+				useExternal
+			/>
 		</Container>
 	);
 };

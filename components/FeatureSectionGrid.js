@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import FeatureContent from './FeatureContent';
+import { COLOR_OPTIONS } from '../utils/constants';
 
 const FeatureGrid = styled.div`
 	display: grid;
@@ -31,16 +32,20 @@ const FeatureGridItem = styled.div`
 		`}
 `;
 
-const FeatureSection = ({ ...props }) => {
+const FeatureSectionGrid = ({ ...props }) => {
 	return (
 		<FeatureGrid repeatRow={Math.floor(props.content.length / 3)}>
 			{props.content.map((item, i) => (
 				<FeatureGridItem key={i} fullCol={i % 3 == 0 || props.fullCol}>
-					<FeatureContent key={i} {...item}></FeatureContent>
+					<FeatureContent
+						key={i}
+						bg={item.bgImage? '': COLOR_OPTIONS[i]}
+						useExternal={props.useExternal}
+						{...item} />
 				</FeatureGridItem>
 			))}
 		</FeatureGrid>
 	);
 };
 
-export default FeatureSection;
+export default FeatureSectionGrid;

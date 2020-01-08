@@ -75,12 +75,7 @@ const FeatureContentStyle = styled.div`
 	justify-content: center;
 	text-align: center;
 	padding: 20px;
-	${props =>
-		props.bgColor &&
-		css`
-			background-color: ${props.bgColor};
-		`}
-
+	${color}
 	&:hover {
 		${FeatureButton} {
 			transform: scaleY(1) translateZ(0);
@@ -106,7 +101,7 @@ const FeatureContentStyle = styled.div`
 
 const FeatureContent = props => {
 	return (
-		<Link href={props.href}>
+		<Link href={props.useExternal? props.href: `/${props.slug}`}>
 			<FeatureContentStyle as="a" {...props}>
 				{props.bgImage && <FeatureBackground {...props} />}
 				<FeatureButton

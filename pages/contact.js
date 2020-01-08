@@ -1,8 +1,17 @@
-import React, { Fragment } from 'react';
-import styled from 'styled-components';
-
+import React from 'react';
+import { Container } from '@computapars/layout';
+import { FlexBox } from '@computapars/flex';
 export default () => (
-	<Fragment>
-		<div margin="none">Marlene Bowles</div>
-	</Fragment>
+	<FlexBox flexDirection="column" height="100vh">
+		<Container>
+			<FlexBox 
+				width={[1 / 2, 1 ]}
+				flexDirection="row">
+				<FlexBox
+					bg="charcoal"
+				>contact me Left</FlexBox>
+				<FlexBox>Right</FlexBox>
+			</FlexBox>
+		</Container>
+	</FlexBox>
 );
