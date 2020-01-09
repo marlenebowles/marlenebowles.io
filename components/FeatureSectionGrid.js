@@ -35,13 +35,18 @@ const FeatureGridItem = styled.div`
 const FeatureSectionGrid = ({ ...props }) => {
 	return (
 		<FeatureGrid repeatRow={Math.floor(props.content.length / 3)}>
-			{props.content.map((item, i) => (
-				<FeatureGridItem key={i} fullCol={i % 3 == 0 || props.fullCol}>
+			{props.content.map((item, index) => (
+				<FeatureGridItem
+					key={index}
+					fullCol={index % 3 == 0 || props.fullCol}
+				>
 					<FeatureContent
-						key={i}
-						bg={item.bgImage? '': COLOR_OPTIONS[Math.floor(Math.random() * COLOR_OPTIONS.length)]}
+						key={index}
+						bg={COLOR_OPTIONS[index]}
 						useExternal={props.useExternal}
-						{...item} />
+						{...item}
+						section={props.section}
+					/>
 				</FeatureGridItem>
 			))}
 		</FeatureGrid>

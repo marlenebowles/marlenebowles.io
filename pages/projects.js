@@ -1,10 +1,10 @@
 import React from 'react';
 import useFilter from './../components/hooks/useFilter';
 import { Container } from '@computapars/layout';
-import { webProjects } from '../schema/';
+import { webProjects } from '../db/';
 import FeatureSectionGrid from '../components/FeatureSectionGrid';
 import { LinkButton } from '@computapars/button';
-import { COLOR_OPTIONS } from './../utils/constants';
+import { ALT_COLOR_OPTIONS } from './../utils/constants';
 
 export default () => {
 	const [filter, setFilter, content] = useFilter(webProjects);
@@ -14,8 +14,8 @@ export default () => {
 			{choices.map((item, index) => (
 				<LinkButton
 					key={item}
-					color={filter == item ? 'white' : COLOR_OPTIONS[index]}
-					bg={filter == item ?  COLOR_OPTIONS[index]: 'white'}
+					color={filter == item ? 'white' : ALT_COLOR_OPTIONS[index]}
+					bg={filter == item ? ALT_COLOR_OPTIONS[index] : 'white'}
 					onClick={() => {
 						setFilter(item);
 					}}
@@ -23,10 +23,11 @@ export default () => {
 					{item}
 				</LinkButton>
 			))}
-			<FeatureSectionGrid 
+			<FeatureSectionGrid
 				fullCol={content.length < 3}
 				useExternal
-				content={content} />
+				content={content}
+			/>
 		</Container>
 	);
 };

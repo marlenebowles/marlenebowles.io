@@ -100,8 +100,15 @@ const FeatureContentStyle = styled.div`
 `;
 
 const FeatureContent = props => {
+	let conditionalProps = {};
+	if (!props.useExternal) {
+		conditionalProps.href = `/${props.section}/[id]${props.slug}`;
+		conditionalProps.as = `/${props.section}/${props.slug}`;
+	} else {
+		conditionalProps.href = props.href;
+	}
 	return (
-		<Link href={props.useExternal? props.href: `/${props.slug}`}>
+		<Link {...conditionalProps}>
 			<FeatureContentStyle as="a" {...props}>
 				{props.bgImage && <FeatureBackground {...props} />}
 				<FeatureButton
