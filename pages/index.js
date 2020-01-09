@@ -1,28 +1,41 @@
 import React from 'react';
 import { FlexBox } from '@computapars/flex';
 import SectionHeader from './../components/SectionHeader';
-import FeatureSection from './../components/FeatureSection';
-import { webProjects, musicProjects } from '../schema/';
+import FeatureSectionGrid from './../components/FeatureSectionGrid';
+import { webProjects, musicProjects } from '../db/';
 import { Container } from '@computapars/layout';
-
+import { LinkButton } from '@computapars/button';
 export default () => (
 	<FlexBox flexDirection="column" height="100vh">
 		<Container>
-			<SectionHeader>Projects.</SectionHeader>
-			<div>View All</div>
-			<FeatureSection content={webProjects} />
+			<FlexBox alignItems="flex-end" flexDirection="row" width={[1]}>
+				<FlexBox>
+					<SectionHeader>Projects.</SectionHeader>
+				</FlexBox>
+				<FlexBox width={1} justifyContent="flex-end">
+					<LinkButton>View All</LinkButton>
+				</FlexBox>
+			</FlexBox>
+			<FeatureSectionGrid section="projects" content={webProjects} />
 		</Container>
 		<Container>
-			<SectionHeader>Music</SectionHeader>
-			<FeatureSection content={musicProjects} />
+			<FlexBox>
+				<SectionHeader>Music.</SectionHeader>
+			</FlexBox>
+			<FlexBox width={1} justifyContent="flex-end">
+				<LinkButton>View All</LinkButton>
+			</FlexBox>
+			<FeatureSectionGrid
+				section="music"
+				useExternal={false}
+				content={musicProjects}
+			/>
 		</Container>
 		<Container>
 			<SectionHeader>About</SectionHeader>
-			<FeatureSection content={webProjects} />
 		</Container>
 		<Container>
 			<SectionHeader>Contact</SectionHeader>
-			<FeatureSection content={webProjects} />
 		</Container>
 	</FlexBox>
 );
