@@ -1,13 +1,20 @@
 import React from 'react';
 import { Container } from '@computapars/layout';
-import { useRouter } from 'next/router';
+import fetch from 'isomorphic-unfetch';
 
-export default function Project() {
-	const router = useRouter();
-	return (
-		<Container>
-			<h1>{router.query.id}</h1>
-			Post
-		</Container>
-	);
-}
+const Project = props => {
+	console.log(props.name);
+	return <Container>Post</Container>;
+};
+
+Project.getInitialProps = async function({ query }) {
+	// pid = 'hello-nextjs'
+	const { name } = query;
+	const postContent = await fetch(
+		`api/projects/${encodeURIComponent(name)}`
+	).then(r => r.text());
+
+	return { postContent };
+};
+
+export default Project;

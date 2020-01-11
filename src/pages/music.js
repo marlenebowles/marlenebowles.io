@@ -1,7 +1,7 @@
 import React from 'react';
 import useFilter from './../hooks/useFilter';
 import { Container } from '@computapars/layout';
-import { musicProjects } from '../db/';
+import { musicProjects } from './api/teasers';
 import FeatureSectionGrid from '../components/FeatureSectionGrid';
 import { LinkButton } from '@computapars/button';
 import { ALT_COLOR_OPTIONS } from './../utils/constants';

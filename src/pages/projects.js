@@ -1,7 +1,6 @@
 import React from 'react';
 import useFilter from './../hooks/useFilter';
 import { Container } from '@computapars/layout';
-import { webProjects } from '../db/';
 import FeatureSectionGrid from '../components/FeatureSectionGrid';
 import { LinkButton } from '@computapars/button';
 import { ALT_COLOR_OPTIONS } from './../utils/constants';
