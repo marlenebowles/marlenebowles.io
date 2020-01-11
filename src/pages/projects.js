@@ -1,5 +1,5 @@
 import React from 'react';
-import useFilter from './../components/hooks/useFilter';
+import useFilter from './../hooks/useFilter';
 import { Container } from '@computapars/layout';
 import { webProjects } from '../db/';
 import FeatureSectionGrid from '../components/FeatureSectionGrid';
