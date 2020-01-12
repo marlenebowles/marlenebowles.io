@@ -5,6 +5,6 @@ export default (req, res) => {
 		query: { name },
 	} = req;
 	res.status(200).json({
-		name: 'sure',
+		name,
 	});
 };

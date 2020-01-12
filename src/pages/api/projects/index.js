@@ -1,5 +1,4 @@
-// import { people } from '../../../data';
-
+import { web } from './../../../data/teasers';
 export default (req, res) => {
-	res.status(200).json({ name: 'index' });
+	res.status(200).json(web);
 };

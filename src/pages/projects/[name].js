@@ -1,15 +1,18 @@
 import React from 'react';
-import { Container } from '@computapars/layout';
 import fetch from 'isomorphic-unfetch';
 
+import { Container } from '@computapars/layout';
+import { H1 } from '@computapars/typography';
+
 const Project = props => {
-	console.log(props);
-	return <Container>Post</Container>;
+	return (
+		<Container>
+			<H1>{props.data.name}</H1>
+		</Container>
+	);
 };
 
 Project.getInitialProps = async ({ query }) => {
-	// pid = 'hello-nextjs'
-	console.log(query);
 	const { name } = query;
 	const postContent = await fetch(
 		`http://localhost:3000/api/projects/${encodeURIComponent(name)}`
