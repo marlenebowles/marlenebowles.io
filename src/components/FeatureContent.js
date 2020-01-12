@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { typography, color } from 'styled-system';
-import Link from 'next/link';
-import ConditionalLink from './../utils/utilities';
+import ConditionalLink from './../components/ConditionalLink';
 
 const FeatureButton = styled.div`
 	position: absolute;
@@ -111,20 +110,16 @@ const FeatureContent = props => {
 		header,
 		useDivider,
 	} = props.data;
-	console.log(props);
 	return (
 		<ConditionalLink
 			condition={!href}
-			wrapper={children => (
-				<Link
-					href={`/${section}/[name]${slug}`}
-					as={`/${section}/${slug}`}
-				>
-					<a style={{ display: 'grid' }}>{children}</a>
-				</Link>
-			)}
+			options={{
+				href: !href ? `/${section}/[name]${slug}` : href,
+				as: `/${section}/${slug}`,
+				style: { display: 'grid' },
+			}}
 		>
-			<FeatureContentStyle as={!href ? 'div' : 'a'}>
+			<FeatureContentStyle>
 				<FeatureBackground
 					{...{
 						bgImage,
