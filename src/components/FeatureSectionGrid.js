@@ -43,9 +43,7 @@ const FeatureSectionGrid = ({ ...props }) => {
 					<FeatureContent
 						key={index}
 						bg={COLOR_OPTIONS[index]}
-						useExternal={props.useExternal}
 						{...item}
-						section={props.section}
 					/>
 				</FeatureGridItem>
 			))}

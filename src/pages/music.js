@@ -1,14 +1,16 @@
 import React from 'react';
-import useFilter from './../components/hooks/useFilter';
-import { Container } from '@computapars/layout';
-import { webProjects } from '../db/';
-import FeatureSectionGrid from '../components/FeatureSectionGrid';
-import { LinkButton } from '@computapars/button';
+import fetch from 'isomorphic-unfetch';
+
+import useFilter from './../hooks/useFilter';
 import { ALT_COLOR_OPTIONS } from './../utils/constants';
 
-export default () => {
-	const [filter, setFilter, content] = useFilter(webProjects);
-	const choices = ['all', 'react', 'MERN', 'node'];
+import { Container } from '@computapars/layout';
+import { LinkButton } from '@computapars/button';
+import FeatureSectionGrid from '../components/FeatureSectionGrid';
+
+const Music = props => {
+	const [filter, setFilter, content] = useFilter(props.data);
+	const choices = ['all', 'solo', 'bands'];
 	return (
 		<Container>
 			{choices.map((item, index) => (
@@ -25,9 +27,16 @@ export default () => {
 			))}
 			<FeatureSectionGrid
 				fullCol={content.length < 3}
-				useExternal
 				content={content}
 			/>
 		</Container>
 	);
 };
+
+Music.getInitialProps = async () => {
+	const postContent = await fetch(`http://localhost:3000/api/music`);
+	const data = await postContent.json();
+	return { data };
+};
+
+export default Music;

@@ -1,7 +1,8 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { typography, color } from 'styled-system';
 import Link from 'next/link';
+import ConditionalLink from './../utils/utilities';
 
 const FeatureButton = styled.div`
 	position: absolute;
@@ -100,16 +101,19 @@ const FeatureContentStyle = styled.div`
 `;
 
 const FeatureContent = props => {
-	let conditionalProps = {};
-	if (!props.useExternal) {
-		conditionalProps.href = `/${props.section}/[id]${props.slug}`;
-		conditionalProps.as = `/${props.section}/${props.slug}`;
-	} else {
-		conditionalProps.href = props.href;
-	}
 	return (
-		<Link {...conditionalProps}>
-			<FeatureContentStyle as="a" {...props}>
+		<ConditionalLink
+			condition={!props.href}
+			wrapper={children => (
+				<Link
+					href={`/${props.section}/[name]${props.slug}`}
+					as={`/${props.section}/${props.slug}`}
+				>
+					<a>{children}</a>
+				</Link>
+			)}
+		>
+			<FeatureContentStyle as={props.href ? 'a' : 'div'} {...props}>
 				{props.bgImage && <FeatureBackground {...props} />}
 				<FeatureButton
 					bg="black"
@@ -133,7 +137,7 @@ const FeatureContent = props => {
 					{props.text}
 				</FeatureText>
 			</FeatureContentStyle>
-		</Link>
+		</ConditionalLink>
 	);
 };
 export default FeatureContent;

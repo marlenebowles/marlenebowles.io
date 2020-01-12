@@ -1,14 +1,17 @@
 import React from 'react';
-import useFilter from './../components/hooks/useFilter';
-import { Container } from '@computapars/layout';
-import { musicProjects } from '../db/';
-import FeatureSectionGrid from '../components/FeatureSectionGrid';
-import { LinkButton } from '@computapars/button';
-import { ALT_COLOR_OPTIONS } from './../utils/constants';
+import fetch from 'isomorphic-unfetch';
 
-export default () => {
-	const [filter, setFilter, content] = useFilter(musicProjects);
-	const choices = ['all', 'solo', 'bands'];
+import { Container } from '@computapars/layout';
+import { LinkButton } from '@computapars/button';
+
+import { ALT_COLOR_OPTIONS } from './../utils/constants';
+import useFilter from './../hooks/useFilter';
+
+import FeatureSectionGrid from '../components/FeatureSectionGrid';
+
+const Projects = props => {
+	const [filter, setFilter, content] = useFilter(props.data);
+	const choices = ['all', 'react', 'MERN', 'node'];
 	return (
 		<Container>
 			{choices.map((item, index) => (
@@ -26,8 +29,15 @@ export default () => {
 			<FeatureSectionGrid
 				fullCol={content.length < 3}
 				content={content}
-				useExternal
 			/>
 		</Container>
 	);
 };
+
+Projects.getInitialProps = async () => {
+	const postContent = await fetch(`http://localhost:3000/api/projects`);
+	const data = await postContent.json();
+	return { data };
+};
+
+export default Projects;

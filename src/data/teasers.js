@@ -1,9 +1,8 @@
-export const webProjects = [
+export const web = [
 	{
 		header: 'Computapars',
 		text: `A personal design system monorepo. Created with Storybook, 
 		Styled Components and styled-system, Computapars makes it easy to scale out my personal projects.`,
-		href: 'http://www.computpars',
 		body: `
             <p>crap</p>
         `,
@@ -12,30 +11,31 @@ export const webProjects = [
 		bgImage: false,
 		useDivider: true,
 		categories: ['react'],
+		section: 'projects',
 	},
 	{
 		header: 'Sound Reverie',
 		text: `A blog exploring sound and inpsirations. `,
-		href: 'sound-reverie',
 		hoverTag: 'View Project',
 		slug: 'sound-reverie',
 		bgImage: false,
 		useDivider: true,
 		categories: ['react', 'MERN', 'node'],
+		section: 'projects',
 	},
 	{
 		header: 'Yourturn.dev',
 		text: `Task sharing makes my home run efficiently.`,
-		href: 'yourturn-dev',
 		slug: 'yourturn-dev',
 		hoverTag: 'View Project',
 		bgImage: 'carol-e1449867374669.jpg',
 		useDivider: false,
 		categories: ['react', 'MERN', 'node'],
+		section: 'projects',
 	},
 ];
 
-export const musicProjects = [
+export const music = [
 	{
 		header: 'Winning Friends',
 		text: `Solo work`,
@@ -44,7 +44,7 @@ export const musicProjects = [
 		bgImage: false,
 		useDivider: true,
 		categories: ['solo'],
-		slug: 'winning-friends',
+		section: 'music',
 	},
 	{
 		header: 'Dead Painters',
@@ -52,9 +52,9 @@ export const musicProjects = [
 		href: 'https://deadpainters.bandcamp.com/',
 		hoverTag: 'View Project',
 		bgImage: false,
-		slug: 'dead-painters',
 		useDivider: true,
 		categories: ['bands'],
+		section: 'music',
 	},
 	{
 		header: 'Fixtures',
@@ -63,7 +63,7 @@ export const musicProjects = [
 		hoverTag: 'View Project',
 		bgImage: 'carol-e1449867374669.jpg',
 		useDivider: false,
-		slug: 'fixtures',
 		categories: ['bands'],
+		section: 'music',
 	},
 ];
