@@ -43,7 +43,7 @@ const FeatureSectionGrid = ({ ...props }) => {
 					<FeatureContent
 						key={index}
 						bg={COLOR_OPTIONS[index]}
-						{...item}
+						data={item}
 					/>
 				</FeatureGridItem>
 			))}

@@ -44,6 +44,7 @@ const FeatureButtonLabel = styled.span`
 
 const FeatureBackground = styled.div`
 	background: url(${props => props.bgImage});
+	${color}
 	background-position: 75% 50%;
 	background-size: cover;
 	position: absolute;
@@ -76,7 +77,6 @@ const FeatureContentStyle = styled.div`
 	justify-content: center;
 	text-align: center;
 	padding: 20px;
-	${color}
 	&:hover {
 		${FeatureButton} {
 			transform: scaleY(1) translateZ(0);
@@ -101,27 +101,43 @@ const FeatureContentStyle = styled.div`
 `;
 
 const FeatureContent = props => {
+	const {
+		slug,
+		href,
+		section,
+		bgImage,
+		hoverTag,
+		text,
+		header,
+		useDivider,
+	} = props.data;
+	console.log(props);
 	return (
 		<ConditionalLink
-			condition={!props.href}
+			condition={!href}
 			wrapper={children => (
 				<Link
-					href={`/${props.section}/[name]${props.slug}`}
-					as={`/${props.section}/${props.slug}`}
+					href={`/${section}/[name]${slug}`}
+					as={`/${section}/${slug}`}
 				>
-					<a>{children}</a>
+					<a style={{ display: 'grid' }}>{children}</a>
 				</Link>
 			)}
 		>
-			<FeatureContentStyle as={props.href ? 'a' : 'div'} {...props}>
-				{props.bgImage && <FeatureBackground {...props} />}
+			<FeatureContentStyle as={!href ? 'div' : 'a'}>
+				<FeatureBackground
+					{...{
+						bgImage,
+					}}
+					bg={props.bg}
+				/>
 				<FeatureButton
 					bg="black"
 					color="white"
 					fontFamily="primary"
 					fontSize={12}
 				>
-					{props.hoverTag}
+					{hoverTag}
 				</FeatureButton>
 				<FeatureHeader
 					color="white"
@@ -130,11 +146,11 @@ const FeatureContent = props => {
 					fontFamily="secondary"
 					letterSpacing="sm"
 				>
-					{props.header}
+					{header}
 				</FeatureHeader>
-				{props.useDivider && <FeatureDivider color="white" />}
+				{useDivider && <FeatureDivider color="white" />}
 				<FeatureText color="white" fontFamily="primary">
-					{props.text}
+					{text}
 				</FeatureText>
 			</FeatureContentStyle>
 		</ConditionalLink>
