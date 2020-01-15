@@ -2,7 +2,7 @@ export const web = [
 	{
 		header: 'Computapars',
 		text: `A personal design system monorepo. Created with Storybook, 
-		Styled Components and styled-system, Computapars makes it easy to scale out my personal projects.`,
+		Styled Components and Styled System, Computapars makes it easy to scale out my personal projects.`,
 		body: `
             <p>crap</p>
         `,
@@ -15,7 +15,7 @@ export const web = [
 	},
 	{
 		header: 'Sound Reverie',
-		text: `A blog exploring sound and inpsirations. `,
+		text: `A blog exploring music, pop culture, and movies. `,
 		hoverTag: 'View Project',
 		slug: 'sound-reverie',
 		bgImage: false,
@@ -25,7 +25,7 @@ export const web = [
 	},
 	{
 		header: 'Yourturn.dev',
-		text: `Task sharing makes my home run efficiently.`,
+		text: `Task sharing made easier. Tasks can be assigned to users in a home and rotated between members.`,
 		slug: 'yourturn-dev',
 		hoverTag: 'View Project',
 		bgImage: 'carol-e1449867374669.jpg',
@@ -40,7 +40,7 @@ export const music = [
 		header: 'Winning Friends',
 		text: `Solo work`,
 		href: 'https://soundcloud.com/winningfriends',
-		hoverTag: 'View Project',
+		hoverTag: 'Listen on Soundcloud',
 		bgImage: false,
 		useDivider: true,
 		categories: ['solo'],
@@ -49,8 +49,8 @@ export const music = [
 	{
 		header: 'Dead Painters',
 		text: `A blog exploring sound and inpsirations. `,
-		href: 'https://deadpainters.bandcamp.com/',
-		hoverTag: 'View Project',
+		href: 'https://open.spotify.com/artist/1KPVoJedU8X4Ep7iuxLaJZ',
+		hoverTag: 'Listen on Spotify',
 		bgImage: false,
 		useDivider: true,
 		categories: ['bands'],
@@ -60,7 +60,7 @@ export const music = [
 		header: 'Fixtures',
 		text: `Task sharing makes my home run efficiently.`,
 		href: 'https://fixturesmusic.bandcamp.com/album/watch-your-head',
-		hoverTag: 'View Project',
+		hoverTag: 'Listen on Bandcamp',
 		bgImage: 'carol-e1449867374669.jpg',
 		useDivider: false,
 		categories: ['bands'],

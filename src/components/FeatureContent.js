@@ -144,7 +144,11 @@ const FeatureContent = props => {
 					{header}
 				</FeatureHeader>
 				{useDivider && <FeatureDivider color="white" />}
-				<FeatureText color="white" fontFamily="primary">
+				<FeatureText
+					lineHeight="1.75"
+					color="white"
+					fontFamily="primary"
+				>
 					{text}
 				</FeatureText>
 			</FeatureContentStyle>
