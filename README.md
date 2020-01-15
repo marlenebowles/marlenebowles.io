@@ -14,3 +14,4 @@ https://reacttricks.com/animating-next-page-transitions-with-framer-motion/
 ## Logo
 
 Use Framer to create an MB or M
+https://codesandbox.io/embed/framer-motion-side-menu-mx2rw?fontsize=14&module=%2Fsrc%2FExample.tsx&codemirror=1
