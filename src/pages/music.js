@@ -3,6 +3,7 @@ import fetch from 'isomorphic-unfetch';
 
 import useFilter from './../hooks/useFilter';
 import { ALT_COLOR_OPTIONS } from './../utils/constants';
+import { FlexBox } from '@computapars/flex';
 
 import { Container } from '@computapars/layout';
 import { LinkButton } from '@computapars/button';
@@ -13,18 +14,27 @@ const Music = props => {
 	const choices = ['all', 'solo', 'bands'];
 	return (
 		<Container>
-			{choices.map((item, index) => (
-				<LinkButton
-					key={item}
-					color={filter == item ? 'white' : ALT_COLOR_OPTIONS[index]}
-					bg={filter == item ? ALT_COLOR_OPTIONS[index] : 'white'}
-					onClick={() => {
-						setFilter(item);
-					}}
-				>
-					{item}
-				</LinkButton>
-			))}
+			<FlexBox
+				justifyContent="center"
+				alignContent="center"
+				padding={'lg'}
+			>
+				{choices.map((item, index) => (
+					<LinkButton
+						fontSize="xl"
+						key={item}
+						color={
+							filter == item ? 'white' : ALT_COLOR_OPTIONS[index]
+						}
+						bg={filter == item ? ALT_COLOR_OPTIONS[index] : 'white'}
+						onClick={() => {
+							setFilter(item);
+						}}
+					>
+						{item}.
+					</LinkButton>
+				))}
+			</FlexBox>
 			<FeatureSectionGrid
 				fullCol={content.length < 3}
 				content={content}
