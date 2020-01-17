@@ -15,9 +15,13 @@ const Projects = props => {
 	const choices = ['all', 'react', 'MERN', 'node'];
 	return (
 		<Container>
-			<FlexBox justifyContent="space-between" alignItems="flex-end">
+			<FlexBox
+				flexWrap="wrap"
+				justifyContent="space-between"
+				alignItems="flex-end"
+			>
 				<SectionHeader>Projects.</SectionHeader>
-				<div>
+				<FlexBox flexWrap="wrap" mt={[10, 0]} mb={[0, 10]}>
 					{choices.map((item, index) => (
 						<LinkButton
 							fontSize="xl"
@@ -39,7 +43,7 @@ const Projects = props => {
 							{item}.
 						</LinkButton>
 					))}
-				</div>
+				</FlexBox>
 			</FlexBox>
 			<FeatureSectionGrid
 				fullCol={content.length < 3}
