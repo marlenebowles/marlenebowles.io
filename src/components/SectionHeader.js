@@ -8,12 +8,12 @@ const Header = styled(H1)`
 	z-index: ${props => props.theme.zIndices.default};
 	${props => css`
 		font-size: 3rem;
-		margin-bottom: 0;
+		margin-bottom: -9px;
 		letter-spacing: ${props.theme.letterSpacings.sm};
 		${props.theme.mediaQueries.md} {
 			font-size: 6rem;
 			letter-spacing: ${props.theme.letterSpacings.xs};
-			margin-bottom: -40px;
+			margin-bottom: -20px;
 		}
 	`}
 	${color}

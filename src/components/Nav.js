@@ -9,13 +9,13 @@ const NavBackground = styled('nav')`
 	z-index: 2004;
 	outline: none;
 	width: 100%;
-	padding: 10px;
+	padding-top: 10px;
 	display: flex;
 	flex-direction: column;
 `;
 const rightStyles = {
-	width: 200,
-	height: 100,
+	width: 100,
+	height: 80,
 	margin: '0 auto',
 };
 
@@ -26,7 +26,7 @@ export const Nav = () => (
 				<a>
 					<motion.svg
 						style={rightStyles}
-						whileHover={{ y: 5 }}
+						whileHover={{ y: -5 }}
 						whileTap={{ scale: 0.8 }}
 					>
 						<motion.g>
@@ -34,6 +34,7 @@ export const Nav = () => (
 								animate={{
 									opacity: 1,
 								}}
+								transition={{ duration: 2 }}
 								initial={{
 									opacity: 0.6,
 								}}
@@ -60,6 +61,7 @@ export const Nav = () => (
 								animate={{
 									opacity: 0.8,
 								}}
+								transition={{ duration: 2 }}
 								initial={{
 									opacity: 1,
 								}}
