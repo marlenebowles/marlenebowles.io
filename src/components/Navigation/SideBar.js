@@ -40,23 +40,13 @@ const SideBar = () => {
 	const [isOpen, toggleOpen] = useCycle(false, true);
 	const containerRef = useRef(null);
 	const { height } = useDimensions(containerRef);
-	const onStart = () => {
-		document.body.setAttribute(
-			'style',
-			'overflow:hidden; position:fixed; width: 100%'
-		);
-	};
-	const onComplete = () => {
-		document.body.setAttribute('style', '');
-	};
+
 	return (
 		<motion.div
 			initial={false}
 			animate={isOpen ? 'open' : 'closed'}
 			custom={height}
 			ref={containerRef}
-			onAnimationStart={onStart}
-			onAnimationComplete={onComplete}
 		>
 			<Box variants={sidebar} />
 			<Menu isOpen={isOpen} toggle={() => toggleOpen()} />

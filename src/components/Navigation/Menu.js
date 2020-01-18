@@ -12,7 +12,6 @@ const MenuList = styled(motion.ul)`
 	left: 0;
 	bottom: 0;
 	right: 0;
-	z-index: ${props => (props.isOpen ? 3 : -1)};
 `;
 const variants = {
 	open: {
