@@ -9,6 +9,14 @@ const StyledMenuItem = styled(motion.li)`
 	z-index: 3;
 `;
 
+const ClickableLink = React.forwardRef(({ onClick, href, children }, ref) => {
+	return (
+		<a href={href} onClick={onClick} ref={ref}>
+			{children}
+		</a>
+	);
+});
+
 const variants = {
 	open: {
 		y: 0,
@@ -33,9 +41,9 @@ export const MenuItem = ({ i }) => {
 			whileHover={{ scale: 1.1 }}
 			whileTap={{ scale: 0.95 }}
 		>
-			<Link href={i.slug}>
-				<a>{i.name}</a>
-			</Link>
+			<ClickableLink href={i.slug} onClick={i.toggle}>
+				{i.name}
+			</ClickableLink>
 		</StyledMenuItem>
 	);
 };
