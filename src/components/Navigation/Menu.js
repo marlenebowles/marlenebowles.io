@@ -3,16 +3,21 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 import { MenuItem } from './MenuItem';
+import { FlexBox } from '@computapars/flex';
 
 const MenuList = styled(motion.ul)`
 	padding: 25px;
 	position: absolute;
 	top: 100px;
-	width: 230px;
-	z-index: 3;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: ${props => (props.isOpen ? 3 : -1)};
 `;
 const variants = {
 	open: {
+		opacity: 1,
+		x: 0,
 		transition: { staggerChildren: 0.07, delayChildren: 0.2 },
 	},
 	closed: {
@@ -26,10 +31,16 @@ const navItems = [
 	{ name: 'About', slug: '/about' },
 ];
 
-export const Menu = ({ toggle }) => (
-	<MenuList variants={variants}>
-		{navItems.map(i => (
-			<MenuItem toggle={toggle} i={i} key={i.name} />
-		))}
+export const Menu = ({ toggle, isOpen }) => (
+	<MenuList isOpen={isOpen} variants={variants}>
+		<FlexBox
+			flexDirection="column"
+			justifyContent="center"
+			alignItems="center"
+		>
+			{navItems.map(i => (
+				<MenuItem toggle={toggle} i={i} key={i.name} />
+			))}
+		</FlexBox>
 	</MenuList>
 );

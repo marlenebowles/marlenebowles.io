@@ -1,12 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import Link from 'next/link';
-
+import { H2 } from '@computapars/typography';
 const StyledMenuItem = styled(motion.li)`
-	padding: 25px;
-	width: 230px;
 	z-index: 3;
+	list-style: none;
+	cursor: pointer;
 `;
 
 const ClickableLink = React.forwardRef(({ onClick, href, children }, ref) => {
@@ -42,7 +41,7 @@ export const MenuItem = ({ i }) => {
 			whileTap={{ scale: 0.95 }}
 		>
 			<ClickableLink href={i.slug} onClick={i.toggle}>
-				{i.name}
+				<H2 color="white">{i.name}</H2>
 			</ClickableLink>
 		</StyledMenuItem>
 	);
