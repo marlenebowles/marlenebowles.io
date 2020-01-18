@@ -29,7 +29,7 @@ const navItems = [
 export const Menu = () => (
 	<MenuList variants={variants}>
 		{navItems.map(i => (
-			<MenuItem i={i} key={i} />
+			<MenuItem i={i} key={i.name} />
 		))}
 	</MenuList>
 );
