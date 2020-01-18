@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import styled from 'styled-components';
 import { FlexBox } from '@computapars/flex';
+import SideBar from './SideBar';
 
 const NavBackground = styled('nav')`
-	position: relative;
 	z-index: 2004;
 	outline: none;
 	width: 100%;
@@ -21,6 +21,7 @@ const rightStyles = {
 
 export const Nav = () => (
 	<NavBackground>
+		<SideBar></SideBar>
 		<FlexBox justifyContent="center">
 			<Link href="/">
 				<a>
