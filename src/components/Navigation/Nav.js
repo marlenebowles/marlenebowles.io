@@ -12,8 +12,9 @@ const NavBackground = styled('nav')`
 	padding-top: 10px;
 	display: flex;
 	flex-direction: column;
+	background: white;
 `;
-const rightStyles = {
+const logoStyles = {
 	width: 100,
 	height: 80,
 	margin: '0 auto',
@@ -26,7 +27,7 @@ export const Nav = () => (
 			<Link href="/">
 				<a>
 					<motion.svg
-						style={rightStyles}
+						style={logoStyles}
 						whileHover={{ scale: 1.1 }}
 						whileTap={{ scale: 0.97 }}
 					>
