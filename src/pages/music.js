@@ -8,6 +8,7 @@ import { FlexBox } from '@computapars/flex';
 import { Container } from '@computapars/layout';
 import { LinkButton } from '@computapars/button';
 import FeatureSectionGrid from '../components/FeatureSectionGrid';
+import SectionHeader from '../components/SectionHeader';
 
 const Music = props => {
 	const [filter, setFilter, content] = useFilter(props.data);
@@ -15,25 +16,34 @@ const Music = props => {
 	return (
 		<Container>
 			<FlexBox
-				justifyContent="center"
-				alignContent="center"
-				padding={'lg'}
+				flexWrap="wrap"
+				justifyContent="space-between"
+				alignItems="flex-end"
 			>
-				{choices.map((item, index) => (
-					<LinkButton
-						fontSize="xl"
-						key={item}
-						color={
-							filter == item ? 'white' : ALT_COLOR_OPTIONS[index]
-						}
-						bg={filter == item ? ALT_COLOR_OPTIONS[index] : 'white'}
-						onClick={() => {
-							setFilter(item);
-						}}
-					>
-						{item}.
-					</LinkButton>
-				))}
+				<SectionHeader>Music.</SectionHeader>
+				<FlexBox flexWrap="wrap" mt={[10, 0]} mb={[0, 10]}>
+					{choices.map((item, index) => (
+						<LinkButton
+							fontSize="xl"
+							key={item}
+							color={
+								filter == item
+									? 'white'
+									: ALT_COLOR_OPTIONS[index]
+							}
+							bg={
+								filter == item
+									? ALT_COLOR_OPTIONS[index]
+									: 'white'
+							}
+							onClick={() => {
+								setFilter(item);
+							}}
+						>
+							{item}.
+						</LinkButton>
+					))}
+				</FlexBox>
 			</FlexBox>
 			<FeatureSectionGrid
 				fullCol={content.length < 3}

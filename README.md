@@ -7,12 +7,11 @@ A portoflio site built with React, Next.Js and the Computapars design system.
 http://seanhalpin.io/work
 https://tobiasahlin.com/
 
-Big blocks of color, or vertical/horizontal rhythm blocks with backgrounds
+## Navigation Page Transition
 
-Sean Halpin fade in of content
+https://reacttricks.com/animating-next-page-transitions-with-framer-motion/
 
-## things to work out
+## Logo
 
-json rendering of projects
-home page
-nav
+Use Framer to create an MB or M
+https://codesandbox.io/embed/framer-motion-side-menu-mx2rw?fontsize=14&module=%2Fsrc%2FExample.tsx&codemirror=1
