@@ -12,7 +12,7 @@ const Box = styled(motion.div)`
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	background: ${props => props.theme.colors.white};
+	background: ${props => props.theme.colors.charcoal};
 	z-index: 2;
 `;
 
@@ -26,7 +26,7 @@ const sidebar = {
 		},
 	}),
 	closed: {
-		clipPath: 'circle(30px at 40px 40px)',
+		clipPath: 'circle(0px at 40px 40px)',
 		transition: {
 			delay: 0.5,
 			type: 'spring',
