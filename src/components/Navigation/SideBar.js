@@ -49,7 +49,7 @@ const SideBar = () => {
 			ref={containerRef}
 		>
 			<Box variants={sidebar} />
-			<Menu />
+			<Menu toggle={() => toggleOpen()} />
 			<MenuToggle toggle={() => toggleOpen()} />
 		</motion.div>
 	);

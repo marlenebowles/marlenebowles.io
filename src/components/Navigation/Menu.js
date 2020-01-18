@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import { MenuItem } from './MenuItem';
 
@@ -26,10 +26,10 @@ const navItems = [
 	{ name: 'About', slug: '/about' },
 ];
 
-export const Menu = () => (
+export const Menu = ({ toggle }) => (
 	<MenuList variants={variants}>
 		{navItems.map(i => (
-			<MenuItem i={i} key={i.name} />
+			<MenuItem toggle={toggle} i={i} key={i.name} />
 		))}
 	</MenuList>
 );
