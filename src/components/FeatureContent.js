@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import dynamic from 'next/dynamic';
 
 import { typography, color } from 'styled-system';
@@ -56,6 +56,19 @@ const FeatureBackground = styled.div`
 	z-index: -1;
 	transform: scale3D(1);
 	transition: transform 0.35s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+	${props =>
+		props.bgImage &&
+		css`
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				background: radial-gradient(circle, transparent 0%, black 100%);
+			}
+		`}
 `;
 const FeatureDivider = styled.div`
 	display: block;
@@ -103,7 +116,7 @@ const FeatureContentStyle = styled.div`
 
 const renderSVGGraphic = name => {
 	const Graphic = dynamic(import(`./SVG/${name}`));
-	return <Graphic />;
+	return <Graphic size={100} />;
 };
 
 const FeatureContent = props => {

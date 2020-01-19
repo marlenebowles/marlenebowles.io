@@ -2,11 +2,11 @@ import react from 'react';
 import { motion } from 'framer-motion';
 import { FlexBox } from '@computapars/flex';
 
-const Computapars = () => (
+const Computapars = ({ size }) => (
 	<FlexBox justifyContent="center">
 		<motion.svg
-			width="140"
-			height="140"
+			width={size}
+			height={size}
 			viewBox="0 0 48 48"
 			xmlns="http://www.w3.org/2000/svg"
 		>

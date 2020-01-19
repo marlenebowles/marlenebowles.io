@@ -2,11 +2,11 @@ import react from 'react';
 import { motion } from 'framer-motion';
 import { FlexBox } from '@computapars/flex';
 
-const SoundReverie = () => (
+const SoundReverie = ({ size }) => (
 	<FlexBox justifyContent="center">
 		<motion.svg
-			width="120"
-			height="120"
+			width={size}
+			height={size}
 			viewBox="0 0 512 512"
 			xmlns="http://www.w3.org/2000/svg"
 		>

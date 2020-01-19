@@ -11,8 +11,7 @@ import BadStatus from './../../components/BadStatus';
 
 const renderSVGGraphic = name => {
 	const Graphic = dynamic(import(`./../../components/SVG/${name}`));
-	console.log(Graphic);
-	return <Graphic />;
+	return <Graphic size={300} />;
 };
 
 const Project = props => {
