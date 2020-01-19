@@ -12,6 +12,7 @@ export const web = [
 		useDivider: true,
 		categories: ['react'],
 		section: 'projects',
+		svgFile: 'Computapars',
 	},
 	{
 		header: 'Sound Reverie',
@@ -22,6 +23,7 @@ export const web = [
 		useDivider: true,
 		categories: ['react', 'MERN', 'node'],
 		section: 'projects',
+		svgFile: 'SoundReverie',
 	},
 	{
 		header: 'Yourturn.dev',
@@ -32,6 +34,7 @@ export const web = [
 		useDivider: false,
 		categories: ['react', 'MERN', 'node'],
 		section: 'projects',
+		svgFile: 'YourTurn',
 	},
 ];
 

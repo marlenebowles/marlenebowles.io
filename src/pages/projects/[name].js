@@ -1,14 +1,22 @@
 import React from 'react';
 import fetch from 'isomorphic-unfetch';
+import dynamic from 'next/dynamic';
 
-import { createMarkup } from './../../utils/utilities';
 import { FlexBox } from '@computapars/flex';
 import { Container } from '@computapars/layout';
 import { H1, Text, IntroText, H5 } from '@computapars/typography';
+
+import { createMarkup } from './../../utils/utilities';
 import BadStatus from './../../components/BadStatus';
 
+const renderSVGGraphic = name => {
+	const Graphic = dynamic(import(`./../../components/SVG/${name}`));
+	console.log(Graphic);
+	return <Graphic />;
+};
+
 const Project = props => {
-	const { header, body, intro, lessonsLearned } = props.data;
+	const { header, body, intro, lessonsLearned, svgFile } = props.data;
 	if (props.status !== 200) {
 		return <BadStatus />;
 	}
@@ -22,7 +30,8 @@ const Project = props => {
 				bg="charcoal"
 			>
 				<Container>
-					<H1>{header}</H1>
+					<H1 color="white">{header}</H1>
+					{svgFile && renderSVGGraphic(svgFile)}
 				</Container>
 			</FlexBox>
 			<Container>

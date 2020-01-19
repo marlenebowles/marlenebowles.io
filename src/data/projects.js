@@ -12,6 +12,7 @@ export const web = [
 		bgImage: false,
 		lessonsLearned: '<p>crap</p>',
 		tech: ['react', 'storybook', 'styled components', 'next.js'],
+		svgFile: 'Computapars',
 	},
 	{
 		slug: 'sound-reverie',
@@ -26,6 +27,7 @@ export const web = [
 		bgImage: false,
 		lessonsLearned: '<p>crap</p>',
 		tech: ['mongoDb', 'express', 'react', 'node', 'next.js'],
+		svgFile: 'SoundReverie',
 	},
 	{
 		slug: 'yourturn-dev',
@@ -41,5 +43,6 @@ export const web = [
 		lessonsLearned:
 			'<p>Information architecture played a key role in the organization of individuals in houses and how they could assign themselves and each other tasks. Coming from a Django/Python background, getting used to Express took a little bit of mental overhead but the ease of writing models in Javascript was worth it.</p>',
 		tech: ['mongoDb', 'express', 'react', 'node', 'heroku'],
+		svgFile: 'YourTurn',
 	},
 ];
