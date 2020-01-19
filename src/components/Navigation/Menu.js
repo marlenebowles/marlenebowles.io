@@ -6,21 +6,33 @@ import { MenuItem } from './MenuItem';
 import { FlexBox } from '@computapars/flex';
 
 const MenuList = styled(motion.ul)`
-	padding: 25px;
 	position: absolute;
-	top: 100px;
-	left: 0;
+	top: 0;
 	bottom: 0;
 	right: 0;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
 `;
 const variants = {
 	open: {
 		opacity: 1,
-		x: 0,
-		transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+		width: '100%',
+		height: 'auto',
+		transition: {
+			staggerChildren: 0.07,
+			delayChildren: 0.8,
+		},
 	},
 	closed: {
-		transition: { staggerChildren: 0.05, staggerDirection: -1 },
+		height: 0,
+		transition: {
+			delay: 1,
+			staggerChildren: 0.05,
+			staggerDirection: -1,
+		},
 	},
 };
 const navItems = [
