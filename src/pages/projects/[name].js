@@ -6,8 +6,8 @@ import { motion } from 'framer-motion';
 
 import { FlexBox } from '@computapars/flex';
 import { Container } from '@computapars/layout';
-import { H1, H5, H4, Text, IntroText } from '@computapars/typography';
-import { GithubIcon, LinkIcon } from '@computapars/icon';
+import { H1, H4, Text, IntroText } from '@computapars/typography';
+import { GithubIcon, OpenInNewIcon } from '@computapars/icon';
 import ConditionalLink from './../../components/ConditionalLink';
 
 import { createMarkup } from './../../utils/utilities';
@@ -52,12 +52,14 @@ const UrlLink = ({ name, link }) => (
 			href: link,
 			style: {
 				display: 'flex',
-				'align-items': 'flex-end',
+				'align-items': 'center',
+				marginTop: '15px',
+				marginLeft: '2px',
 			},
 		}}
 	>
 		<StyledIconHover>
-			<LinkIcon size={'60px'} />
+			<OpenInNewIcon size={'45px'} />
 		</StyledIconHover>
 		<IntroText
 			style={{
@@ -115,12 +117,13 @@ const Project = props => {
 						<IntroText marginTop="0">{intro}</IntroText>
 						<Text
 							as="div"
+							fontSize={['md', 'lg']}
 							dangerouslySetInnerHTML={createMarkup(body)}
 						/>
 					</FlexBox>
 					<FlexBox width={[1, 1, 1, 1 / 4]} flexDirection="column">
 						<FlexBox
-							paddingLeft={[0, 0, 0, 'sm']}
+							paddingLeft={[0, 0, 0, 'md']}
 							flexDirection="column"
 						>
 							<H4 margin="0">Lessons Learned</H4>
@@ -132,7 +135,7 @@ const Project = props => {
 							/>
 						</FlexBox>
 						<FlexBox
-							paddingLeft={[0, 0, 0, 'sm']}
+							paddingLeft={[0, 0, 0, 'md']}
 							flexDirection="column"
 						>
 							<H4 marginY="0 15px">Visit</H4>
