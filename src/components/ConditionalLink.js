@@ -8,7 +8,7 @@ const ConditionalLink = ({ condition = false, options, children }) => {
 			<a style={style}>{children}</a>
 		</Link>
 	) : (
-		<a style={style} href={href}>
+		<a target="_blank" style={style} href={href}>
 			{children}
 		</a>
 	);

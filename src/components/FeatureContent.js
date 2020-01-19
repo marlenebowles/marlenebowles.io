@@ -1,5 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import dynamic from 'next/dynamic';
+
 import { typography, color } from 'styled-system';
 import ConditionalLink from './../components/ConditionalLink';
 
@@ -19,7 +21,7 @@ const FeatureButton = styled.div`
 const FeatureHeader = styled.h3`
 	transform: translate3D(0, 0, 0);
 	transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	margin: 0 auto 60px;
+	margin: 0 auto ${props => (props.svgFile ? 0 : 60)}px;
 	${typography}
 	${color}
 `;
@@ -28,7 +30,7 @@ const FeatureText = styled.p`
 	transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	max-width: 500px;
 	width: 80%;
-	margin: 0 auto 60px;
+	margin: 0 auto 30px;
 	${typography}
 	${color}
 `;
@@ -54,6 +56,19 @@ const FeatureBackground = styled.div`
 	z-index: -1;
 	transform: scale3D(1);
 	transition: transform 0.35s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+	${props =>
+		props.bgImage &&
+		css`
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				background: radial-gradient(circle, transparent 0%, black 100%);
+			}
+		`}
 `;
 const FeatureDivider = styled.div`
 	display: block;
@@ -99,6 +114,11 @@ const FeatureContentStyle = styled.div`
 	}
 `;
 
+const renderSVGGraphic = name => {
+	const Graphic = dynamic(import(`./SVG/${name}`));
+	return <Graphic size={100} />;
+};
+
 const FeatureContent = props => {
 	const {
 		slug,
@@ -109,6 +129,7 @@ const FeatureContent = props => {
 		text,
 		header,
 		useDivider,
+		svgFile,
 	} = props.data;
 	return (
 		<ConditionalLink
@@ -140,9 +161,11 @@ const FeatureContent = props => {
 					fontWeight="regular"
 					fontFamily="secondary"
 					letterSpacing="sm"
+					svgFile={svgFile}
 				>
 					{header}
 				</FeatureHeader>
+				{svgFile && renderSVGGraphic(svgFile)}
 				{useDivider && <FeatureDivider color="white" />}
 				<FeatureText
 					lineHeight="1.75"

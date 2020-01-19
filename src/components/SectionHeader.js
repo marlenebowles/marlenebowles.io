@@ -12,7 +12,7 @@ const Header = styled(H1)`
 		letter-spacing: ${props.theme.letterSpacings.sm};
 		${props.theme.mediaQueries.md} {
 			font-size: 6rem;
-			letter-spacing: ${props.theme.letterSpacings.xs};
+			letter-spacing: ${props.theme.letterSpacings.tight};
 			margin-bottom: -20px;
 			margin-top: 0;
 		}

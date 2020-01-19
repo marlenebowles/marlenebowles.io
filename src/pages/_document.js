@@ -41,6 +41,10 @@ export default class MyDocument extends Document {
                                 a {
                                     text-decoration: none;
                                 }
+                                ul > li {
+                                    list-style-type: circle;
+
+                                }
                                 `,
 							}}
 						/>
