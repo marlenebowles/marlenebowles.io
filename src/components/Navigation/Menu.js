@@ -26,7 +26,6 @@ const variants = {
 const navItems = [
 	{ name: 'Projects', slug: '/projects' },
 	{ name: 'Music', slug: '/music' },
-	{ name: 'Contact', slug: '/contact' },
 	{ name: 'About', slug: '/about' },
 ];
 
