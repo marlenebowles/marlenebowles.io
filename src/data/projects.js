@@ -7,8 +7,18 @@ export const web = [
 		body: `
             crap, crap /b /n crap
         `,
-		href: 'https://www.computapars.com',
-		github: 'https://github.com/marlenebowles/computapars',
+		links: [
+			{
+				type: 0,
+				name: 'Github',
+				link: 'https://github.com/marlenebowles/computapars',
+			},
+			{
+				type: 1,
+				name: 'Url',
+				link: 'https://computapars.marlenebowles.now.sh/',
+			},
+		],
 		bgImage: false,
 		lessonsLearned: '<p>crap</p>',
 		tech: ['react', 'storybook', 'styled components', 'next.js'],
@@ -22,9 +32,18 @@ export const web = [
 		body: `
             <p>crap</p>
         `,
-		href: 'http://soundreverie.com/',
-		github: '',
-		bgImage: false,
+		links: [
+			{
+				type: 0,
+				name: 'Github',
+				link: 'https://github.com/marlenebowles/computapars',
+			},
+			{
+				type: 1,
+				name: 'Url',
+				link: 'https://computapars.marlenebowles.now.sh/',
+			},
+		],
 		lessonsLearned: '<p>crap</p>',
 		tech: ['mongoDb', 'express', 'react', 'node', 'next.js'],
 		svgFile: 'SoundReverie',
@@ -37,9 +56,18 @@ export const web = [
 		body: `
             <p>crap</p>
         `,
-		href: 'https://www.computapars.com',
-		github: 'https://github.com/marlenebowles/computapars',
-		bgImage: 'carol-e1449867374669.jpg',
+		links: [
+			{
+				type: 0,
+				name: 'Github',
+				link: 'https://github.com/marlenebowles/yourturn.dev',
+			},
+			{
+				type: 1,
+				name: 'Url',
+				link: 'https://yourturn-dev.herokuapp.com/',
+			},
+		],
 		lessonsLearned:
 			'<p>Information architecture played a key role in the organization of individuals in houses and how they could assign themselves and each other tasks. Coming from a Django/Python background, getting used to Express took a little bit of mental overhead but the ease of writing models in Javascript was worth it.</p>',
 		tech: ['mongoDb', 'express', 'react', 'node', 'heroku'],

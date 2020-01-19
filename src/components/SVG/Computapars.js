@@ -10,7 +10,6 @@ const Computapars = ({ size }) => (
 			viewBox="0 0 24 24"
 			xmlns="http://www.w3.org/2000/svg"
 		>
-			{/* fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round; */}
 			<circle fill="none" stroke="white" cx="12" cy="13.985" r="7.5" />
 			<line
 				fill="none"
