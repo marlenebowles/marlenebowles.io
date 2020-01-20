@@ -43,24 +43,11 @@ export default () => (
 							Enthusiast / Musician / Cat Whisperer / History Buff
 						</IntroText>
 						<FlexBox marginY="sm" width={1} alignItems="center">
-							<Link passHref href="/projects">
-								<Button
-									marginRight="sm"
-									height={40}
-									variant="transparent"
-									as="a"
-								>
-									View My Work
-								</Button>
+							<Link href="/projects">
+								<a>View My Work</a>
 							</Link>
-							<Link passHref href="/about">
-								<Button
-									height={40}
-									variant="transparent"
-									as="a"
-								>
-									Contact Me
-								</Button>
+							<Link href="/about">
+								<a>Contact Me</a>
 							</Link>
 						</FlexBox>
 					</FlexBox>
