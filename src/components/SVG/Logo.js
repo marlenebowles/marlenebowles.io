@@ -50,7 +50,6 @@ const Logo = () => (
 					transition={{ duration: 0.5, flip: 2 }}
 					d="M0 49V0H20.8209L31 12.25V28.2692L0 49Z"
 					fill="#F66B5E"
-					fill-opacity="0.5"
 				/>
 				<motion.path
 					animate={{
@@ -62,7 +61,6 @@ const Logo = () => (
 					transition={{ duration: 0.5, flip: 2 }}
 					d="M0 76V24L33 46.8163V64.8571L21.5 76H0Z"
 					fill="#F66B5E"
-					fill-opacity="0.5"
 				/>
 			</motion.g>
 		</motion.svg>
