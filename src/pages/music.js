@@ -25,8 +25,7 @@ const Music = props => {
 						<LinkButton
 							fontSize="xl"
 							key={item}
-							color={filter == item ? 'white' : item.color}
-							bg={filter == item ? item.color : 'white'}
+							color={filter == item ? 'coral' : 'text'}
 							onClick={() => {
 								setFilter(item);
 							}}

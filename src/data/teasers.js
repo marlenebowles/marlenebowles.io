@@ -47,6 +47,7 @@ export const music = [
 		bgImage: 'dead_painters.jpg',
 		categories: ['bands'],
 		section: 'music',
+		color: 'black',
 	},
 	{
 		header: 'Winning Friends',
@@ -56,6 +57,7 @@ export const music = [
 		bgImage: 'winning_friends.jpg',
 		categories: ['solo'],
 		section: 'music',
+		color: 'black',
 	},
 	{
 		header: 'Fixtures',
@@ -65,5 +67,6 @@ export const music = [
 		bgImage: 'fixtures.jpg',
 		categories: ['bands'],
 		section: 'music',
+		color: 'black',
 	},
 ];

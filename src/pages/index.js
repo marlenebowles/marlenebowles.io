@@ -9,24 +9,41 @@ import { Button } from '@computapars/button';
 import SectionHeader from './../components/SectionHeader';
 import TriangleBackground from './../components/TriangleBackground';
 export default () => (
-	<FlexBox flexDirection="column" height="calc(100vh - 100)">
+	<FlexBox alignItems="center" height="calc(100vh - 100px)">
 		<TriangleBackground></TriangleBackground>
 		<Container>
-			<FlexBox width={[1 / 2]}>
-				<SectionHeader>Hello, I'm Marlene Bowles.</SectionHeader>
-			</FlexBox>
-			<FlexBox flexDirection="column" alignItems="flex-start">
-				<IntroText>I'm a Front End Developer.</IntroText>
-				<Link passHref href="/projects">
-					<Button variant="primary" as="a">
-						View My Work
-					</Button>
-				</Link>
-				<Link passHref href="/about">
-					<Button marginTop={'sm'} variant="primary" as="a">
-						Contact Me
-					</Button>
-				</Link>
+			<FlexBox
+				alignItems="center"
+				justifyContent="center"
+				flexDirection="column"
+				width={1}
+				flexWrap="wrap"
+			>
+				<SectionHeader color="white">Marlene Bowles.</SectionHeader>
+				<FlexBox
+					bg="charcoal"
+					width={[3 / 4]}
+					padding="xl"
+					flexDirection="column"
+					justifyContent="center"
+					alignItems="flex-start"
+				>
+					<IntroText marginTop="0" color="white">
+						Front End Developer / Full Time Nerd / MacrameMaker /
+						React Expert / Webpack Wrangler / NextJS Enthusiast /
+						Musician / Cat Enthusiast / History Buff
+					</IntroText>
+					<Link passHref href="/projects">
+						<Button variant="transparent" as="a">
+							View My Work
+						</Button>
+					</Link>
+					<Link passHref href="/about">
+						<Button marginTop={'sm'} variant="transparent" as="a">
+							Contact Me
+						</Button>
+					</Link>
+				</FlexBox>
 			</FlexBox>
 		</Container>
 	</FlexBox>

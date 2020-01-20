@@ -77,7 +77,7 @@ const FeatureBackground = styled.div`
 				background: radial-gradient(
 					circle,
 					transparent 20%,
-					black 100%
+					black 150%
 				);
 			}
 		`}
