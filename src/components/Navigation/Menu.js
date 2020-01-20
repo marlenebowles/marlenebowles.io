@@ -36,6 +36,7 @@ const variants = {
 	},
 };
 const navItems = [
+	{ name: 'Overview', slug: '/' },
 	{ name: 'Projects', slug: '/projects' },
 	{ name: 'Music', slug: '/music' },
 	{ name: 'About', slug: '/about' },
