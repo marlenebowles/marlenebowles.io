@@ -31,6 +31,7 @@ const Background = styled('div')`
 	z-index: -1;
 	overflow: hidden;
 	background: #ff6b5e;
+	background-repeat: repeat;
 `;
 export default () => (
 	<Background>
