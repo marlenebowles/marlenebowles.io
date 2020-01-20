@@ -21,7 +21,7 @@
 	"homepage": "https://github.com/marlenebowles/marlenebowles.io#readme",
 	"dependencies": {
 		"@computapars/button": "1.0.1",
-		"@computapars/core": "1.0.2",
+		"@computapars/core": "1.0.1",
 		"@computapars/flex": "1.0.1",
 		"@computapars/layout": "1.0.1",
 		"@computapars/typography": "1.0.1",
