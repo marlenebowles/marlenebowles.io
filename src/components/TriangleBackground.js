@@ -2,16 +2,24 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-const list = {
-	visible: {
-		y: 0,
-		opacity: 1,
-	},
-	hidden: {
-		y: 90,
+const variants = {
+	offScreen: {
 		opacity: 0,
+		transition: {
+			staggerChildren: 0.07,
+		},
+	},
+	onScreen: {
+		opacity: 1,
+		transition: {
+			ease: 'easeOut',
+			duration: 2,
+			staggerChildren: 0.05,
+			staggerDirection: -1,
+		},
 	},
 };
+
 const Background = styled('div')`
 	position: absolute;
 	top: 0;
@@ -22,7 +30,7 @@ const Background = styled('div')`
 	height: 100%;
 	z-index: -1;
 	overflow: hidden;
-	background: #2e4057;
+	background: #ff6b5e;
 `;
 export default () => (
 	<Background>
@@ -31,13 +39,14 @@ export default () => (
 				display: 'block',
 				width: '100%',
 				height: '100%',
+				background: 'transparent',
 			}}
 			animate={{
 				opacity: 1,
 			}}
 			initial={{
 				opacity: 0.6,
-				scale: 1.6,
+				scale: 1.2,
 			}}
 		>
 			<defs>
@@ -59,7 +68,10 @@ export default () => (
 						strokeWidth="0"
 						fill="#2E4057"
 					/>
-					<path
+					<motion.path
+						initial="offScreen"
+						animate="onScreen"
+						variants={variants}
 						d="M 6.716196516483848 120.97306844307182  L 72.2997515693666 66.42464450387497  L 10.190661332495495 49.9963986579388 Z"
 						strokeWidth="0"
 						fill="#2E4057"
@@ -69,7 +81,10 @@ export default () => (
 						strokeWidth="0"
 						fill="#FF6B5E"
 					/>
-					<path
+					<motion.path
+						initial="offScreen"
+						animate="onScreen"
+						variants={variants}
 						d="M -48.16857971414771 128.86453689687866  L 7.911184380244464 190.6219584497262  L 6.716196516483848 120.97306844307182 Z"
 						strokeWidth="0"
 						fill="#2E4057"
@@ -109,7 +124,10 @@ export default () => (
 						strokeWidth="0"
 						fill="#2E4057"
 					/>
-					<path
+					<motion.path
+						initial="offScreen"
+						animate="onScreen"
+						variants={variants}
 						d="M -62.30748824947888 4.892839293477756  L -139.32659690818602 57.92900120312182  L -53.719453849051206 78.9125139436839 Z"
 						strokeWidth="0"
 						fill="#2E4057"
@@ -145,7 +163,10 @@ export default () => (
 						strokeWidth="0"
 						fill="#2E4057"
 					/>
-					<path
+					<motion.path
+						initial="offScreen"
+						animate="onScreen"
+						variants={variants}
 						d="M -67.57796969269205 -69.0688109764697  L -114.17399128877062 -14.579812402671335  L -62.30748824947888 4.892839293477756 Z"
 						strokeWidth="0"
 						fill="#FF6B5E"
@@ -185,7 +206,10 @@ export default () => (
 						strokeWidth="0"
 						fill="#FF6B5E"
 					/>
-					<path
+					<motion.path
+						initial="offScreen"
+						animate="onScreen"
+						variants={variants}
 						d="M -194.42512727281004 193.53555202171668  L -114.17399128877062 241.42018759732866  L -116.9591534499467 195.49088380601125 Z"
 						strokeWidth="0"
 						fill="#FF6B5E"
@@ -200,7 +224,10 @@ export default () => (
 						strokeWidth="0"
 						fill="#2E4057"
 					/>
-					<path
+					<motion.path
+						initial="offScreen"
+						animate="onScreen"
+						variants={variants}
 						d="M 61.574872727189955 193.53555202171668  L 139.04084655005332 195.49088380601125  L 126.086367086928 109.60737697620294 Z"
 						strokeWidth="0"
 						fill="#2E4057"
@@ -230,7 +257,10 @@ export default () => (
 						strokeWidth="0"
 						fill="#2E4057"
 					/>
-					<path
+					<motion.path
+						initial="offScreen"
+						animate="onScreen"
+						variants={variants}
 						d="M 141.82600871122938 -14.579812402671335  L 61.574872727189955 -62.46444797828332  L 46.491403547014784 -3.878406638670766 Z"
 						strokeWidth="0"
 						fill="#2E4057"
@@ -276,7 +306,10 @@ export default () => (
 						strokeWidth="0"
 						fill="#FF6B5E"
 					/>
-					<path
+					<motion.path
+						initial="offScreen"
+						animate="onScreen"
+						variants={variants}
 						d="M -53.719453849051206 334.9125139436839  L -7.232647654133757 273.7332375310878  L -62.30748824947888 260.8928392934778 Z"
 						strokeWidth="0"
 						fill="#FF6B5E"
@@ -351,7 +384,10 @@ export default () => (
 						strokeWidth="0"
 						fill="#2E4057"
 					/>
-					<path
+					<motion.path
+						initial="offScreen"
+						animate="onScreen"
+						variants={variants}
 						d="M 61.574872727189955 -62.46444797828332  L 46.52534013782744 -118.25139376259017  L 7.911184380244464 -65.37804155027379 Z"
 						strokeWidth="0"
 						fill="#2E4057"
@@ -387,7 +423,10 @@ export default () => (
 						strokeWidth="0"
 						fill="#2E4057"
 					/>
-					<path
+					<motion.path
+						initial="offScreen"
+						animate="onScreen"
+						variants={variants}
 						d="M 202.2805461509488 78.9125139436839  L 193.69251175052113 4.892839293477756  L 116.673403091814 57.92900120312182 Z"
 						strokeWidth="0"
 						fill="#2E4057"
@@ -415,7 +454,7 @@ export default () => (
 					<path
 						d="M 10.190661332495495 305.9963986579388  L 72.2997515693666 322.42464450387496  L 46.491403547014784 252.12159336132925 Z"
 						strokeWidth="0"
-						fill="#FF6B5E"
+						fill="#2E4057"
 					/>
 					<path
 						d="M -209.50859645298522 252.12159336132925  L -139.32659690818602 313.9290012031218  L -114.17399128877062 241.42018759732866 Z"
@@ -433,7 +472,10 @@ export default () => (
 						fill="#FF6B5E"
 					/>
 
-					<path
+					<motion.path
+						initial="offScreen"
+						animate="onScreen"
+						variants={variants}
 						d="M 141.82600871122938 241.42018759732866  L 193.69251175052113 260.8928392934778  L 188.42203030730795 186.9311890235303 Z"
 						strokeWidth="0"
 						fill="#FF6B5E"
@@ -456,27 +498,27 @@ export default () => (
 					<path
 						d="M 116.673403091814 313.9290012031218  L 193.69251175052113 260.8928392934778  L 141.82600871122938 241.42018759732866 Z"
 						strokeWidth="0"
-						fill="#2E4057"
+						fill="#FF6B5E"
 					/>
 					<path
 						d="M 263.91118438024444 190.6219584497262  L 262.7161965164838 120.97306844307182  L 207.8314202858523 128.86453689687866 Z"
 						strokeWidth="0"
-						fill="#2E4057"
+						fill="#FF6B5E"
 					/>
 					<path
 						d="M 193.69251175052113 4.892839293477756  L 188.42203030730795 -69.0688109764697  L 141.82600871122938 -14.579812402671335 Z"
 						strokeWidth="0"
-						fill="#2E4057"
+						fill="#FF6B5E"
 					/>
 					<path
 						d="M 139.04084655005332 -60.509116193988746  L 126.086367086928 -146.39262302379706  L 61.574872727189955 -62.46444797828332 Z"
 						strokeWidth="0"
-						fill="#2E4057"
+						fill="#FF6B5E"
 					/>
 					<path
 						d="M 10.190661332495495 -206.0036013420612  L -53.719453849051206 -177.0874860563161  L 6.716196516483848 -135.02693155692816 Z"
 						strokeWidth="0"
-						fill="#2E4057"
+						fill="#FF6B5E"
 					/>
 					<path
 						d="M 263.91118438024444 -65.37804155027379  L 188.42203030730795 -69.0688109764697  L 193.69251175052113 4.892839293477756 Z"
@@ -497,12 +539,12 @@ export default () => (
 					<path
 						d="M -53.719453849051206 334.9125139436839  L 6.716196516483848 376.97306844307184  L 10.190661332495495 305.9963986579388 Z"
 						strokeWidth="0"
-						fill="#2E4057"
+						fill="#FF6B5E"
 					/>
 					<path
 						d="M 72.2997515693666 322.42464450387496  L 126.086367086928 365.60737697620294  L 116.673403091814 313.9290012031218 Z"
 						strokeWidth="0"
-						fill="#2E4057"
+						fill="#FF6B5E"
 					/>
 					<path
 						d="M -48.16857971414771 384.8645368968787  L 6.716196516483848 376.97306844307184  L -53.719453849051206 334.9125139436839 Z"
@@ -512,7 +554,7 @@ export default () => (
 					<path
 						d="M -209.47465986217256 -118.25139376259017  L -248.08881561975554 -65.37804155027379  L -194.42512727281004 -62.46444797828332 Z"
 						strokeWidth="0"
-						fill="#2E4057"
+						fill="#FF6B5E"
 					/>
 					<path
 						d="M 6.716196516483848 -135.02693155692816  L -53.719453849051206 -177.0874860563161  L -48.16857971414771 -127.13546310312134 Z"
@@ -522,7 +564,7 @@ export default () => (
 					<path
 						d="M 72.2997515693666 -189.57535549612504  L 6.716196516483848 -135.02693155692816  L 46.52534013782744 -118.25139376259017 Z"
 						strokeWidth="0"
-						fill="#2E4057"
+						fill="#FF6B5E"
 					/>
 					<path
 						d="M -309.7194538490512 78.9125139436839  L -249.28380348351615 120.97306844307182  L -245.8093386675045 49.9963986579388 Z"
@@ -549,7 +591,10 @@ export default () => (
 						strokeWidth="0"
 						fill="#2E4057"
 					/>
-					<path
+					<motion.path
+						initial="offScreen"
+						animate="onScreen"
+						variants={variants}
 						d="M 262.7161965164838 120.97306844307182  L 202.2805461509488 78.9125139436839  L 207.8314202858523 128.86453689687866 Z"
 						strokeWidth="0"
 						fill="#FF6B5E"
@@ -645,7 +690,10 @@ export default () => (
 						strokeWidth="0"
 						fill="#2E4057"
 					/>
-					<path
+					<motion.path
+						initial="offScreen"
+						animate="onScreen"
+						variants={variants}
 						d="M -248.08881561975554 -65.37804155027379  L -318.30748824947887 4.892839293477756  L -263.23264765413376 17.733237531087816 Z"
 						strokeWidth="0"
 						fill="#2E4057"
