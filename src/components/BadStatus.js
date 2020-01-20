@@ -14,7 +14,7 @@ export default () => (
 		>
 			<Container>
 				<H1>Sorry</H1>
-				<IntroText>
+				<IntroText fontSize={['sm', 'md', 'lg', 'xl']}>
 					There seems to be an issue with the url you requested.
 				</IntroText>
 				<Link href="/">
