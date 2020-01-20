@@ -44,7 +44,7 @@ const Music = props => {
 };
 
 Music.getInitialProps = async () => {
-	const postContent = await fetch(`http://localhost:3000/api/music`);
+	const postContent = await fetch(`http://marlenebowles.io/api/music`);
 	const data = await postContent.json();
 	return { data };
 };
