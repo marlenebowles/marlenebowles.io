@@ -15,7 +15,7 @@ import {
 import ConditionalLink from './../components/ConditionalLink';
 
 const BackgroundImg = styled.div`
-	background: url(selfie.jpg);
+	background: url(selfie.JPG);
 	background-position: 60%;
 	background-size: cover;
 	top: 0;

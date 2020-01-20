@@ -1,5 +1,6 @@
 import React from 'react';
 import fetch from 'isomorphic-unfetch';
+import styled, { css } from 'styled-components';
 
 import useFilter from './../hooks/useFilter';
 import { FlexBox } from '@computapars/flex';
@@ -9,6 +10,15 @@ import { LinkButton } from '@computapars/button';
 import FeatureSectionGrid from '../components/FeatureSectionGrid';
 import SectionHeader from '../components/SectionHeader';
 
+const FilterBox = styled(FlexBox)`
+	${props => css`
+		display: none;
+		${props.theme.mediaQueries.md} {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	`}
+`;
 const Music = props => {
 	const [filter, setFilter, content] = useFilter(props.data);
 	const choices = ['all', 'solo', 'bands'];
@@ -20,7 +30,7 @@ const Music = props => {
 				alignItems="flex-end"
 			>
 				<SectionHeader>Music.</SectionHeader>
-				<FlexBox flexWrap="wrap" marginY={['lg', 'lg', 'xs', 'xs']}>
+				<FilterBox flexWrap="wrap" marginY={['lg', 'lg', 'xs', 'xs']}>
 					{choices.map((item, index) => (
 						<LinkButton
 							fontSize="xl"
@@ -33,7 +43,7 @@ const Music = props => {
 							{item}.
 						</LinkButton>
 					))}
-				</FlexBox>
+				</FilterBox>
 			</FlexBox>
 			<FeatureSectionGrid
 				fullCol={content.length < 3}

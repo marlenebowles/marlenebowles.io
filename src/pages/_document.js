@@ -38,6 +38,9 @@ export default class MyDocument extends Document {
 						<style
 							dangerouslySetInnerHTML={{
 								__html: `
+                                body {
+                                    -webkit-font-smoothing: antialiased;
+                                }
                                 a {
                                     text-decoration: none;
                                 }

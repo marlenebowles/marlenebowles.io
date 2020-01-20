@@ -31,9 +31,13 @@ export default () => (
 				>
 					<FlexBox
 						flexDirection="column"
-						padding={['sm', 'sm', 'sm', 'lg']}
+						padding={['md', 'md', 'xl', 'xl']}
 					>
-						<IntroText marginY="0" color="white">
+						<IntroText
+							fontSize={['sm', 'md', 'lg', 'xl']}
+							marginY="0"
+							color="white"
+						>
 							Front End Developer / Full Time Nerd / MacrameMaker
 							/ React Expert / Webpack Wrangler / NextJS
 							Enthusiast / Musician / Cat Whisperer / History Buff
