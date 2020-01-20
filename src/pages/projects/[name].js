@@ -161,7 +161,7 @@ const Project = props => {
 Project.getInitialProps = async ({ query }) => {
 	const { name } = query;
 	const response = await fetch(
-		`http://localhost:3000/api/projects/${encodeURIComponent(name)}`
+		`http://marlenebowles.io/api/projects/${encodeURIComponent(name)}`
 	);
 	const data = await response.json();
 

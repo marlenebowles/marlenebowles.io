@@ -44,7 +44,7 @@ const Projects = props => {
 };
 
 Projects.getInitialProps = async () => {
-	const postContent = await fetch(`http://localhost:3000/api/projects`);
+	const postContent = await fetch(`http://marlenebowles.io/api/projects`);
 	const data = await postContent.json();
 	return { data };
 };
