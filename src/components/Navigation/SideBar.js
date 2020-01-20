@@ -18,7 +18,7 @@ const Box = styled(motion.div)`
 
 const sidebar = {
 	open: (height = 1000) => ({
-		clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+		clipPath: `circle(${height * 2 + 200}px at 50px 50px)`,
 		transition: {
 			type: 'spring',
 			stiffness: 20,
@@ -26,7 +26,7 @@ const sidebar = {
 		},
 	}),
 	closed: {
-		clipPath: 'circle(0px at 40px 40px)',
+		clipPath: 'circle(0px at 55px 50px)',
 		transition: {
 			delay: 0.5,
 			type: 'spring',
