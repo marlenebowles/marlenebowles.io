@@ -12,78 +12,54 @@ const NavBackground = styled('nav')`
 	display: flex;
 	flex-direction: column;
 	background: transparent;
+	position: fixed;
 `;
-const logoStyles = {
-	width: 100,
-	height: 80,
-	margin: '0 auto',
-};
 
-export const Nav = () => (
+const getVariant = strokeColor => ({
+	hidden: {
+		strokeWidth: 0,
+		stroke: strokeColor,
+	},
+	show: {
+		stroke: strokeColor,
+		strokeWidth: 15,
+		transition: {
+			staggerDirection: -1,
+			duration: 2,
+		},
+	},
+});
+export const Nav = props => (
 	<NavBackground>
-		<SideBar></SideBar>
+		<SideBar />
 		<FlexBox justifyContent="center">
 			<Link href="/">
 				<a>
 					<motion.svg
-						style={logoStyles}
-						whileHover={{ scale: 1.1 }}
-						whileTap={{ scale: 0.97 }}
+						width="100"
+						height="60"
+						viewBox="0 0 90 175"
+						fill="none"
 					>
-						<motion.g>
-							<motion.path
-								animate={{
-									opacity: 1,
-								}}
-								initial={{
-									opacity: 0.6,
-								}}
-								transition={{ duration: 0.5, flip: 1 }}
-								d="M7.62939e-06 -4.45856e-06L8.52723e-06 77L39.3489 77L7.62939e-06 -4.45856e-06Z"
-								fill="#2E4057"
-							/>
-							<motion.path
-								animate={{
-									opacity: 0.6,
-								}}
-								initial={{
-									opacity: 1,
-								}}
-								transition={{ duration: 0.5, flip: 1 }}
-								d="M50.9998 4.48769e-06L11.6509 77L51 77L50.9998 4.48769e-06Z"
-								fill="#2E4057"
-							/>
-						</motion.g>
-						<motion.g
-							initial={{
-								x: 50,
-							}}
-						>
-							<motion.path
-								animate={{
-									opacity: 0.8,
-								}}
-								initial={{
-									opacity: 1,
-								}}
-								transition={{ duration: 0.5, flip: 2 }}
-								d="M25.5 10.5L-8.91965e-05 1.63734e-05L-8.65996e-05 59.4092L25.4999 25.5L25.5 10.5Z"
-								fill="#FF6B5E"
-								fill-opacity="0.6"
-							/>
-							<motion.path
-								animate={{
-									opacity: 0.8,
-								}}
-								initial={{
-									opacity: 1,
-								}}
-								transition={{ duration: 0.5, flip: 2 }}
-								d="M-4.60327e-05 27.5L-8.58307e-05 77L15.4999 77L25.4999 63.5L25.4999 49.5L-4.60327e-05 27.5Z"
-								fill="#FF6B5E"
-								fill-opacity="0.6"
-							/>
-						</motion.g>
+						<motion.path
+							d="M59.5 151H1L61 2L118 151H59.5ZM59.5 151L118 2L180 151H59.5Z"
+							variants={getVariant('#2E4057')}
+							initial="hidden"
+							animate="show"
+						/>
+					</motion.svg>
+					<motion.svg
+						width="30"
+						height="60"
+						viewBox="0 0 68 175"
+						fill="none"
+					>
+						<motion.path
+							d="M44 150H1V73.9479V1H44L67 33.0764L18 74.4653L67 123.097L44 150Z"
+							variants={getVariant('#FF6B5E')}
+							initial="hidden"
+							animate="show"
+						/>
 					</motion.svg>
 				</a>
 			</Link>
