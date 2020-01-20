@@ -9,7 +9,7 @@ import { Button } from '@computapars/button';
 import SectionHeader from './../components/SectionHeader';
 import TriangleBackground from './../components/TriangleBackground';
 export default () => (
-	<FlexBox flexDirection="column" height="100vh">
+	<FlexBox flexDirection="column" height="calc(100vh - 100)">
 		<TriangleBackground></TriangleBackground>
 		<Container>
 			<FlexBox width={[1 / 2]}>

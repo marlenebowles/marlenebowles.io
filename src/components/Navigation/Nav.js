@@ -12,6 +12,7 @@ const NavBackground = styled('nav')`
 	flex-direction: row;
 	justify-content: center;
 	height: 100px;
+	background: white;
 `;
 
 const LogoWrapper = styled('a')`

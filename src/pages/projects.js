@@ -4,7 +4,7 @@ import fetch from 'isomorphic-unfetch';
 import { Container } from '@computapars/layout';
 import { LinkButton } from '@computapars/button';
 import { FlexBox } from '@computapars/flex';
-import { ALT_COLOR_OPTIONS } from './../utils/constants';
+import { COLOR_OPTIONS } from './../utils/constants';
 import useFilter from './../hooks/useFilter';
 import SectionHeader from '../components/SectionHeader';
 
@@ -27,15 +27,9 @@ const Projects = props => {
 							fontSize="xl"
 							key={item}
 							color={
-								filter == item
-									? 'white'
-									: ALT_COLOR_OPTIONS[index]
+								filter == item ? 'white' : COLOR_OPTIONS[index]
 							}
-							bg={
-								filter == item
-									? ALT_COLOR_OPTIONS[index]
-									: 'white'
-							}
+							bg={filter == item ? COLOR_OPTIONS[index] : 'white'}
 							onClick={() => {
 								setFilter(item);
 							}}
