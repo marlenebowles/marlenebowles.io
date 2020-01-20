@@ -18,6 +18,7 @@ const NavBackground = styled('nav')`
 const LogoWrapper = styled('a')`
 	position: absolute;
 	top: 30px;
+	cursor: pointer;
 `;
 
 export const Nav = props => (
