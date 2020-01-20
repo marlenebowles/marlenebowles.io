@@ -21,7 +21,7 @@ const Projects = props => {
 				alignItems="flex-end"
 			>
 				<SectionHeader>Projects.</SectionHeader>
-				<FlexBox flexWrap="wrap" mt={[10, 0]} mb={[0, 10]}>
+				<FlexBox flexWrap="wrap" marginY={['lg', 'lg', 'xs', 'xs']}>
 					{choices.map((item, index) => (
 						<LinkButton
 							fontSize="xl"

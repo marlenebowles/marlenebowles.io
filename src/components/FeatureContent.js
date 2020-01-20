@@ -9,7 +9,7 @@ const FeatureButton = styled.div`
 	position: absolute;
 	top: 0;
 	right: 20px;
-	padding: 17px 20px;
+	padding: ${props => props.theme.space.sm};
 	transform-origin: 0 0;
 	will-change: transform, opacity;
 	transform: scaleY(0) translateZ(0);
@@ -21,7 +21,7 @@ const FeatureButton = styled.div`
 const FeatureHeader = styled.h3`
 	transform: translate3D(0, 0, 0);
 	transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	margin: 0 auto ${props => (props.svgFile ? 0 : 60)}px;
+	margin: 0 auto ${props => (props.svgFile ? 15 : 60)}px;
 	${typography}
 	${color}
 `;
@@ -29,10 +29,9 @@ const FeatureText = styled.p`
 	transform: translate3D(0, 0, 0);
 	transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	max-width: 500px;
-	width: 80%;
-	margin: 0 auto 30px;
+	margin: 0 auto ${props => props.theme.space.sm};
 	${typography}
-	${color}
+	${color};
 `;
 
 const FeatureButtonLabel = styled.span`
@@ -66,7 +65,11 @@ const FeatureBackground = styled.div`
 				left: 0;
 				bottom: 0;
 				right: 0;
-				background: radial-gradient(circle, transparent 0%, black 100%);
+				background: radial-gradient(
+					circle,
+					transparent 20%,
+					black 100%
+				);
 			}
 		`}
 `;
@@ -79,7 +82,7 @@ const FeatureDivider = styled.div`
 	height: 2px;
 	background-color: currentColor;
 	width: 60px;
-	margin: 30px auto;
+	margin: ${props => props.theme.space.md} auto;
 	transform: scale3D(1);
 	transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	${color}
@@ -90,7 +93,7 @@ const FeatureContentStyle = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
-	padding: 20px;
+	padding: ${props => props.theme.space.md};
 	&:hover {
 		${FeatureButton} {
 			transform: scaleY(1) translateZ(0);
@@ -128,7 +131,6 @@ const FeatureContent = props => {
 		hoverTag,
 		text,
 		header,
-		useDivider,
 		svgFile,
 	} = props.data;
 	return (
@@ -166,7 +168,7 @@ const FeatureContent = props => {
 					{header}
 				</FeatureHeader>
 				{svgFile && renderSVGGraphic(svgFile)}
-				{useDivider && <FeatureDivider color="white" />}
+				<FeatureDivider color="white" />
 				<FeatureText
 					lineHeight="1.75"
 					color="white"

@@ -6,13 +6,12 @@ import { FlexBox } from '@computapars/flex';
 import SideBar from './SideBar';
 
 const NavBackground = styled('nav')`
-	z-index: 2004;
+	z-index: 4;
 	outline: none;
 	width: 100%;
-	padding-top: 10px;
 	display: flex;
 	flex-direction: column;
-	background: white;
+	background: transparent;
 `;
 const logoStyles = {
 	width: 100,

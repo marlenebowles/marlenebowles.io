@@ -111,7 +111,7 @@ const Project = props => {
 					{svgFile && renderSVGGraphic(svgFile)}
 				</Container>
 			</FlexBox>
-			<Container padding={['sm', 'lg', 'md']}>
+			<Container>
 				<FlexBox flexDirection="row" flexWrap="wrap" width={1}>
 					<FlexBox width={[1, 1, 1, 3 / 4]} flexDirection="column">
 						<IntroText marginTop="0">{intro}</IntroText>
@@ -123,24 +123,25 @@ const Project = props => {
 					</FlexBox>
 					<FlexBox width={[1, 1, 1, 1 / 4]} flexDirection="column">
 						<FlexBox
-							paddingLeft={[0, 0, 0, 'md']}
 							flexDirection="column"
-						>
-							<H4 margin="0">Lessons Learned</H4>
-							<Text
-								as="div"
-								dangerouslySetInnerHTML={createMarkup(
-									lessonsLearned
-								)}
-							/>
-						</FlexBox>
-						<FlexBox
 							paddingLeft={[0, 0, 0, 'md']}
-							flexDirection="column"
 						>
-							<H4 marginY="0 15px">Visit</H4>
+							<FlexBox flexDirection="column">
+								<H4 margin="0">Lessons Learned</H4>
+								<Text
+									as="div"
+									dangerouslySetInnerHTML={createMarkup(
+										lessonsLearned
+									)}
+								/>
+							</FlexBox>
+							<FlexBox flexDirection="column">
+								<H4 marginY="0 15px">Visit</H4>
 
-							{links && links.length > 0 && renderLinks(links)}
+								{links &&
+									links.length > 0 &&
+									renderLinks(links)}
+							</FlexBox>
 						</FlexBox>
 					</FlexBox>
 				</FlexBox>
