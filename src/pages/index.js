@@ -15,34 +15,51 @@ export default () => (
 			<FlexBox
 				alignItems="center"
 				justifyContent="center"
-				flexDirection="column"
+				flexDirection="row"
 				width={1}
 				flexWrap="wrap"
 			>
-				<SectionHeader color="white">Marlene Bowles.</SectionHeader>
+				<FlexBox width={[1, 1, 1, 1 / 3]} alignSelf="baseline">
+					<SectionHeader color="white">Marlene Bowles.</SectionHeader>
+				</FlexBox>
 				<FlexBox
-					bg="charcoal"
-					width={[3 / 4]}
-					padding="xl"
-					flexDirection="column"
+					width={[1, 1, 1, 2 / 3]}
+					flexDirection={['column']}
 					justifyContent="center"
 					alignItems="flex-start"
+					bg="charcoal"
 				>
-					<IntroText marginTop="0" color="white">
-						Front End Developer / Full Time Nerd / MacrameMaker /
-						React Expert / Webpack Wrangler / NextJS Enthusiast /
-						Musician / Cat Enthusiast / History Buff
-					</IntroText>
-					<Link passHref href="/projects">
-						<Button variant="transparent" as="a">
-							View My Work
-						</Button>
-					</Link>
-					<Link passHref href="/about">
-						<Button marginTop={'sm'} variant="transparent" as="a">
-							Contact Me
-						</Button>
-					</Link>
+					<FlexBox
+						flexDirection="column"
+						padding={['sm', 'sm', 'sm', 'lg']}
+					>
+						<IntroText marginY="0" color="white">
+							Front End Developer / Full Time Nerd / MacrameMaker
+							/ React Expert / Webpack Wrangler / NextJS
+							Enthusiast / Musician / Cat Whisperer / History Buff
+						</IntroText>
+						<FlexBox marginY="sm" width={1} alignItems="center">
+							<Link passHref href="/projects">
+								<Button
+									marginRight="sm"
+									height={40}
+									variant="transparent"
+									as="a"
+								>
+									View My Work
+								</Button>
+							</Link>
+							<Link passHref href="/about">
+								<Button
+									height={40}
+									variant="transparent"
+									as="a"
+								>
+									Contact Me
+								</Button>
+							</Link>
+						</FlexBox>
+					</FlexBox>
 				</FlexBox>
 			</FlexBox>
 		</Container>

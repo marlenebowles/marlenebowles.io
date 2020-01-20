@@ -7,9 +7,15 @@ const Header = styled(H1)`
 	position: relative;
 	z-index: ${props => props.theme.zIndices.default};
 	${props => css`
-		font-size: 4rem;
+		font-size: 3rem;
 		margin-bottom: -9px;
 		letter-spacing: ${props.theme.letterSpacings.sm};
+		${props.theme.mediaQueries.sm} {
+			font-size: 4rem;
+			letter-spacing: ${props.theme.letterSpacings.tight};
+			margin-bottom: -20px;
+			margin-top: 0;
+		}
 		${props.theme.mediaQueries.lg} {
 			font-size: 6rem;
 			letter-spacing: ${props.theme.letterSpacings.tight};
