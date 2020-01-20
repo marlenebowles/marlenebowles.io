@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import FeatureContent from './FeatureContent';
-import { COLOR_OPTIONS } from '../utils/constants';
 
 const FeatureGrid = styled.div`
 	display: grid;
@@ -40,11 +39,7 @@ const FeatureSectionGrid = ({ ...props }) => {
 					key={index}
 					fullCol={index % 3 == 0 || props.fullCol}
 				>
-					<FeatureContent
-						key={index}
-						bg={COLOR_OPTIONS[index]}
-						data={item}
-					/>
+					<FeatureContent key={index} bg={item.color} data={item} />
 				</FeatureGridItem>
 			))}
 		</FeatureGrid>

@@ -1,3 +1,4 @@
+import { COLOR_OPTIONS } from './../utils/constants';
 export const web = [
 	{
 		slug: 'computapars',
@@ -13,6 +14,7 @@ export const web = [
             <p>As with all projects, naming this shared design system was at times pretentious and at times very goofy. I settled on the term Computapars after realizing what a joy it was to not have to re-code all of the components I was using. </p>
             <p>Computapars is latin for Computer Party and it definitely feels like this when I'm able to integrate this design system into a new project.</p>
         `,
+		color: 'charcoal',
 		links: [
 			{
 				type: 0,
@@ -44,6 +46,7 @@ export const web = [
             <p>Of course, with web development, things always go wrong. Packages get out of date, api's change, CDN's go down. Not having access to routing, configs and the internals of an app is paramount.</p>
             <p>In the future of this project I would love to integrate Spotify's API to create a unique listening and visual experience for my readers. I would also lke to expand the content to be driven by others in the group of musicians I've found myself lucky to be a part of.</p>
         `,
+		color: 'teal',
 		links: [
 			{
 				type: 0,
@@ -93,5 +96,6 @@ export const web = [
 			'<p>Coming from a Django/Python background, getting used to Express took a little bit of mental overhead but the ease of writing models in Javascript was worth it.</p>',
 		tech: ['mongoDb', 'express', 'react', 'node', 'heroku'],
 		svgFile: 'YourTurn',
+		color: 'grey',
 	},
 ];

@@ -4,7 +4,6 @@ import fetch from 'isomorphic-unfetch';
 import { Container } from '@computapars/layout';
 import { LinkButton } from '@computapars/button';
 import { FlexBox } from '@computapars/flex';
-import { COLOR_OPTIONS } from './../utils/constants';
 import useFilter from './../hooks/useFilter';
 import SectionHeader from '../components/SectionHeader';
 
@@ -12,7 +11,7 @@ import FeatureSectionGrid from '../components/FeatureSectionGrid';
 
 const Projects = props => {
 	const [filter, setFilter, content] = useFilter(props.data);
-	const choices = ['all', 'react', 'MERN', 'node'];
+	const choices = ['all', 'react', 'node'];
 	return (
 		<Container>
 			<FlexBox
@@ -26,10 +25,7 @@ const Projects = props => {
 						<LinkButton
 							fontSize="xl"
 							key={item}
-							color={
-								filter == item ? 'white' : COLOR_OPTIONS[index]
-							}
-							bg={filter == item ? COLOR_OPTIONS[index] : 'white'}
+							color={filter == item ? 'coral' : 'text'}
 							onClick={() => {
 								setFilter(item);
 							}}

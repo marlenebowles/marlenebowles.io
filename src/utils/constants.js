@@ -1,3 +1,8 @@
-export const COLOR_OPTIONS = ['secondary', 'primary', 'yellow', 'charcoal'];
-
-export const ALT_COLOR_OPTIONS = ['yellow', 'mdPurple', 'charcoal'];
+export const COLOR_OPTIONS = [
+	'charcoal',
+	'grey',
+	'teal',
+	'grey',
+	'coral',
+	'calmBlue',
+];
