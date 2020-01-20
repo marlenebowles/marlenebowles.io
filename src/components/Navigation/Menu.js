@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { MenuItem } from './MenuItem';
 import { FlexBox } from '@computapars/flex';
-
+import { H5 } from '@computapars/typography';
 const MenuList = styled(motion.ul)`
 	position: absolute;
 	top: 0;
@@ -40,6 +40,23 @@ const navItems = [
 	{ name: 'Music', slug: '/music' },
 	{ name: 'About', slug: '/about' },
 ];
+
+const fadeIn = {
+	open: {
+		y: 0,
+		opacity: 1,
+		transition: {
+			y: { stiffness: 1000, velocity: -100 },
+		},
+	},
+	closed: {
+		y: 50,
+		opacity: 0,
+		transition: {
+			y: { stiffness: 1000 },
+		},
+	},
+};
 
 export const Menu = ({ toggle, isOpen }) => (
 	<MenuList isOpen={isOpen} variants={variants}>

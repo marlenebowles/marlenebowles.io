@@ -1,13 +1,15 @@
 import React from 'react';
+import Link from 'next/link';
+
 import { FlexBox } from '@computapars/flex';
 import { Container } from '@computapars/layout';
-import { H1, IntroText } from '@computapars/typography';
+import { IntroText } from '@computapars/typography';
 import { Button } from '@computapars/button';
-import SectionHeader from './../components/SectionHeader';
 
+import SectionHeader from './../components/SectionHeader';
 import TriangleBackground from './../components/TriangleBackground';
 export default () => (
-	<FlexBox flexDirection="column" height="100vh">
+	<FlexBox flexDirection="column" height="calc(100vh - 100)">
 		<TriangleBackground></TriangleBackground>
 		<Container>
 			<FlexBox width={[1 / 2]}>
@@ -15,8 +17,16 @@ export default () => (
 			</FlexBox>
 			<FlexBox flexDirection="column" alignItems="flex-start">
 				<IntroText>I'm a Front End Developer.</IntroText>
-				<Button>View My Work</Button>
-				<Button>View My Profile</Button>
+				<Link passHref href="/projects">
+					<Button variant="primary" as="a">
+						View My Work
+					</Button>
+				</Link>
+				<Link passHref href="/about">
+					<Button marginTop={'sm'} variant="primary" as="a">
+						Contact Me
+					</Button>
+				</Link>
 			</FlexBox>
 		</Container>
 	</FlexBox>

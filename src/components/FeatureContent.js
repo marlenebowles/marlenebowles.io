@@ -23,7 +23,11 @@ const FeatureHeader = styled.h3`
 	transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	margin: 0 auto ${props => (props.svgFile ? 15 : 60)}px;
 	${typography}
-	${color}
+    ${color}
+    font-size: ${props => props.theme.fontSizes.xxl};
+    ${props => props.theme.mediaQueries.md} {
+        font-size: ${props => props.theme.fontSizes.xxxl};
+    }
 `;
 const FeatureText = styled.p`
 	transform: translate3D(0, 0, 0);
@@ -159,7 +163,6 @@ const FeatureContent = props => {
 				</FeatureButton>
 				<FeatureHeader
 					color="white"
-					fontSize="xxxl"
 					fontWeight="regular"
 					fontFamily="secondary"
 					letterSpacing="sm"

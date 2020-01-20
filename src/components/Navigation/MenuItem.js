@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { H2 } from '@computapars/typography';
+
 const StyledMenuItem = styled(motion.li)`
 	z-index: 3;
 	list-style: none;
@@ -37,7 +38,7 @@ export const MenuItem = ({ i }) => {
 	return (
 		<StyledMenuItem
 			variants={variants}
-			whileHover={{ scale: 1.1 }}
+			whileHover={{ y: -3 }}
 			whileTap={{ scale: 0.95 }}
 		>
 			<ClickableLink href={i.slug} onClick={i.toggle}>

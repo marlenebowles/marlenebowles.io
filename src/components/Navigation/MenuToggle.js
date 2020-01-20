@@ -6,14 +6,15 @@ const Button = styled('button')`
 	outline: none;
 	border: none;
 	cursor: pointer;
-	position: absolute;
-	top: 18px;
-	left: 15px;
+	display: inline-block;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
 	background: transparent;
 	z-index: 3;
+	position: absolute;
+	left: 30px;
+	top: 25px;
 `;
 const Path = props => (
 	<motion.path strokeWidth="3" strokeLinecap="round" {...props} />

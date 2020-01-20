@@ -19,7 +19,7 @@ const Background = styled('div')`
 	bottom: 0;
 	right: 0;
 	width: 100%;
-	height: 100vh;
+	height: calc(100vh - 100);
 	z-index: -1;
 	overflow: hidden;
 `;
