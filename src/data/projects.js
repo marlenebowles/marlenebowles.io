@@ -51,7 +51,7 @@ export const web = [
 			{
 				type: 0,
 				name: 'Github',
-				link: 'https://github.com/marlenebowles/computapars',
+				link: 'https://github.com/marlenebowles/soundreverie',
 			},
 		],
 		lessonsLearned: `<p>Next.js is continuosly rolling out new features and having their new api routing helped immensely.</p>`,
