@@ -48,14 +48,15 @@ export default () => (
 				opacity: 0.6,
 				scale: 1.2,
 			}}
+			xmlns="http://www.w3.org/2000/svg"
 		>
 			<defs>
 				<pattern
 					id="puzzle"
 					x="0"
 					y="0"
-					width="256"
-					height="256"
+					width="256px"
+					height="256px"
 					patternUnits="userSpaceOnUse"
 				>
 					<path
@@ -1352,7 +1353,7 @@ export default () => (
 					/>
 				</pattern>
 			</defs>
-			<motion.rect x="0" y="0" width="100%" fill="url(#puzzle)" />
+			<rect x="0" y="0" height="100%" width="100%" fill="url(#puzzle)" />
 		</motion.svg>
 	</Background>
 );
