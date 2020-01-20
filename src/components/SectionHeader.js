@@ -9,7 +9,7 @@ const Header = styled(H1)`
 	${props => css`
 		font-size: 3rem;
 		margin-bottom: -9px;
-		letter-spacing: ${props.theme.letterSpacings.normal};
+		letter-spacing: -0.25rem;
 		${props.theme.mediaQueries.sm} {
 			font-size: 4.5rem;
 			letter-spacing: ${props.theme.letterSpacings.tight};
