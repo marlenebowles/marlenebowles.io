@@ -2,7 +2,6 @@ import React from 'react';
 import fetch from 'isomorphic-unfetch';
 
 import useFilter from './../hooks/useFilter';
-import { ALT_COLOR_OPTIONS } from './../utils/constants';
 import { FlexBox } from '@computapars/flex';
 
 import { Container } from '@computapars/layout';
@@ -26,16 +25,8 @@ const Music = props => {
 						<LinkButton
 							fontSize="xl"
 							key={item}
-							color={
-								filter == item
-									? 'white'
-									: ALT_COLOR_OPTIONS[index]
-							}
-							bg={
-								filter == item
-									? ALT_COLOR_OPTIONS[index]
-									: 'white'
-							}
+							color={filter == item ? 'white' : item.color}
+							bg={filter == item ? item.color : 'white'}
 							onClick={() => {
 								setFilter(item);
 							}}

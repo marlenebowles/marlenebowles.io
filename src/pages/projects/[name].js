@@ -32,7 +32,7 @@ const GithubLink = ({ name, link }) => (
 		}}
 	>
 		<StyledIconHover>
-			<GithubIcon size={'50px'} />
+			<GithubIcon fill="charcoal" size={'50px'} />
 		</StyledIconHover>
 		<IntroText
 			marginY="0"
@@ -59,7 +59,7 @@ const UrlLink = ({ name, link }) => (
 		}}
 	>
 		<StyledIconHover>
-			<OpenInNewIcon size={'45px'} />
+			<OpenInNewIcon fill="charcoal" size={'45px'} />
 		</StyledIconHover>
 		<IntroText
 			style={{
@@ -85,7 +85,15 @@ const renderLinks = (links, props) => {
 };
 
 const Project = props => {
-	const { header, body, intro, lessonsLearned, svgFile, links } = props.data;
+	const {
+		color,
+		header,
+		body,
+		intro,
+		lessonsLearned,
+		svgFile,
+		links,
+	} = props.data;
 	if (props.status !== 200) {
 		return <BadStatus />;
 	}
@@ -96,7 +104,7 @@ const Project = props => {
 				alignItems="center"
 				flexDirection="column"
 				height={['80vh']}
-				bg="charcoal"
+				bg={color}
 			>
 				<Container>
 					<H1

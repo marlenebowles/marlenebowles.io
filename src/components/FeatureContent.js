@@ -14,6 +14,7 @@ const FeatureButton = styled.div`
 	will-change: transform, opacity;
 	transform: scaleY(0) translateZ(0);
 	transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+	background: black;
 	${typography}
 	${color}
 `;
@@ -47,7 +48,11 @@ const FeatureButtonLabel = styled.span`
 `;
 
 const FeatureBackground = styled.div`
-	background: url(${props => props.bgImage});
+	${props =>
+		props.bgImage &&
+		css`
+            background: url(${props => props.bgImage})};
+        `}
 	${color}
 	background-position: 75% 50%;
 	background-size: cover;

@@ -1,3 +1,4 @@
+import { COLOR_OPTIONS } from './../utils/constants';
 export const web = [
 	{
 		header: 'Computapars',
@@ -8,6 +9,7 @@ export const web = [
         `,
 		hoverTag: 'View Project',
 		slug: 'computapars',
+		color: 'charcoal',
 		bgImage: false,
 		categories: ['react'],
 		section: 'projects',
@@ -18,8 +20,9 @@ export const web = [
 		text: `A blog exploring music, pop culture, and movies. `,
 		hoverTag: 'View Project',
 		slug: 'sound-reverie',
+		color: 'teal',
 		bgImage: false,
-		categories: ['react', 'MERN', 'node'],
+		categories: ['react', 'node'],
 		section: 'projects',
 		svgFile: 'SoundReverie',
 	},
@@ -28,7 +31,8 @@ export const web = [
 		text: `Task sharing made easier. Tasks can be assigned to users in a home and rotated between members.`,
 		slug: 'yourturn-dev',
 		hoverTag: 'View Project',
-		categories: ['react', 'MERN', 'node'],
+		color: 'grey',
+		categories: ['react', 'node'],
 		section: 'projects',
 		svgFile: 'YourTurn',
 	},
