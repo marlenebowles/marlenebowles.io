@@ -86,11 +86,6 @@ export const web = [
 				name: 'Github',
 				link: 'https://github.com/marlenebowles/yourturn.dev',
 			},
-			{
-				type: 1,
-				name: 'Url',
-				link: 'https://yourturn-dev.herokuapp.com/',
-			},
 		],
 		lessonsLearned:
 			'<p>Coming from a Django/Python background, getting used to Express took a little bit of mental overhead but the ease of writing models in Javascript was worth it.</p>',
